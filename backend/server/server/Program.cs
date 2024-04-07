@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using server;
+using System.Net;
 using System.Text;
 using System;
 
@@ -6,16 +7,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        if (!HttpListener.IsSupported)
-        {
-            Console.WriteLine("Windows XP SP2 or Server 2003 is required to use the HttpListener class.");
-            return;
-        }
+
 
         HttpListener listener = new HttpListener();
         listener.Prefixes.Add("http://localhost:8080/");
         listener.Start();
         Console.WriteLine("Listening...");
+
+        //Router to handel incoming Calls
+        Router router = new Router();
+        router.AddRoute("/", context => "{\"message\":\"Hello from /\"}");
+        router.AddRoute("/data", context => "{\"message\":\"Hello from /data\"}");
+        router.AddRoute("/posts", context => "{\"message\":\"Hello from /posts\"}");
 
         while (true)
         {
@@ -23,22 +26,7 @@ class Program
             HttpListenerRequest request = context.Request;
             HttpListenerResponse response = context.Response;
 
-            string responseString;
-            switch (request.Url.AbsolutePath)
-            {
-                case "/":
-                    responseString = "{\"message\":\"Hello from /\"}";
-                    break;
-                case "/data":
-                    responseString = "{\"message\":\"Hello from /data\"}";
-                    break;
-                case "/posts":
-                    responseString = "{\"message\":\"Hello from /posts\"}";
-                    break;
-                default:
-                    responseString = "{\"message\":\"Unknown path\"}";
-                    break;
-            }
+            string responseString = router.ProcessRequest(context);
 
             byte[] buffer = Encoding.UTF8.GetBytes(responseString);
 

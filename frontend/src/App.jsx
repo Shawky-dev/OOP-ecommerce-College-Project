@@ -1,4 +1,8 @@
+import { Container, Row, Col, ListGroup, Card } from 'react-bootstrap';
 import { useEffect, useState } from "react";
+import Header from './Header'
+import LeftSidebar from "./LeftSidebar";
+import MainContent from './MainContent';
 function App() {
   const [message, setMessage] = useState('');
 
@@ -11,8 +15,18 @@ function App() {
 
   return (
     <div>
-      <h1>{message}</h1>
-      <h1>yo</h1>
+      <Header />
+      <Container fluid>
+        <Row>
+          <Col xs={2} id="sidebar-wrapper" style={{ marginTop: "40px" }}>
+            <LeftSidebar />
+          </Col>
+          <Col xs={10} id="page-content-wrapper" style={{ marginTop: "40px" }}>
+            <MainContent />
+          </Col>
+        </Row>
+      </Container>
+
     </div>
   );
 }

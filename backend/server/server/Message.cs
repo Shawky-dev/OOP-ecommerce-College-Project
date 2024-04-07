@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace server
 {
-    public class Post
+    public class Message
     {
-        public string Title { get; set; }
-        public int Id { get; set; }
-        public string Body { get; set; }
+        public string Message { get; set; }
     }
+
 }
