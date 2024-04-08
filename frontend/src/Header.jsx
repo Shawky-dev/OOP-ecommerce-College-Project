@@ -6,7 +6,7 @@ function MyNavbar() {
             <Navbar.Brand href="#home"><img src="../assets/logo-white-new1.png" style={{ width: '100px', marginLeft: '20px' }} alt="" /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Form inline className="mx-auto d-flex">
+                <Form inline="true" className="mx-auto d-flex">
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" style={{ width: '500px' }} />
                     <Button variant="outline-success" style={{ marginLeft: '10px' }}>Search</Button>
                 </Form>

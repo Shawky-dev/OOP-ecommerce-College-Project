@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace server
 {
-    public class Message
+    internal class Controller
     {
-        public string message { get; set; }
+
     }
 }
