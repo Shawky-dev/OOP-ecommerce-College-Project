@@ -20,22 +20,24 @@ const priceTagStyle = {
 
 function ItemCard(props) {
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={`data:image/jpeg;base64,${props.ImageBase64}`} />
-            <Card.Body>
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <div>
-                        <Card.Title>{props.title}</Card.Title>
-                        <Card.Title style={{ fontSize: "14px", opacity: "50%" }}>{props.SellerName}</Card.Title>
+        <>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={`data:image/jpeg;base64,${props.ImageBase64}`} width={"200px"} height={"230px"} />
+                <Card.Body>
+                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                        <div>
+                            <Card.Title>{props.title}</Card.Title>
+                            <Card.Title style={{ fontSize: "14px", opacity: "50%" }}>{props.SellerName}</Card.Title>
+                        </div>
+                        <Card.Title style={priceTagStyle}>{props.Price}</Card.Title>
                     </div>
-                    <Card.Title style={priceTagStyle}>{props.Price}</Card.Title>
-                </div>
-                <Card.Text>
-                    {props.text}
-                </Card.Text>
-                <Button variant="primary">add to Cart</Button>
-            </Card.Body>
-        </Card>
+                    <Card.Text>
+                        {props.text}
+                    </Card.Text>
+                    <Button variant="primary">add to Cart</Button>
+                </Card.Body>
+            </Card>
+        </>
     );
 }
 

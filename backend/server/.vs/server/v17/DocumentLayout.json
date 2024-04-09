@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "D:\\gam3a\\OOPProject\\backend\\server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|D:\\gam3a\\OOPProject\\backend\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|D:\\gam3a\\OOPProject\\backend\\server\\server\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|d:\\gam3a\\oopproject\\backend\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,20 +15,8 @@
       "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\router.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|d:\\gam3a\\oopproject\\backend\\server\\server\\databasefolder\\items\\items.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|D:\\gam3a\\OOPProject\\backend\\server\\server\\databasefolder\\items\\items.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\databasefolder\\items\\items.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|D:\\gam3a\\OOPProject\\backend\\server\\server\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|D:\\gam3a\\OOPProject\\backend\\server\\server\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|D:\\gam3a\\OOPProject\\backend\\server\\server\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 886,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Program.cs",
-              "RelativeDocumentMoniker": "server\\Program.cs",
-              "ToolTip": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Program.cs",
-              "RelativeToolTip": "server\\Program.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAUwB4AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T14:53:15.603Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Controller.cs",
-              "DocumentMoniker": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Controller.cs",
-              "RelativeDocumentMoniker": "server\\Controller.cs",
-              "ToolTip": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Controller.cs",
-              "RelativeToolTip": "server\\Controller.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T15:35:48.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "items.txt",
               "DocumentMoniker": "D:\\gam3a\\OOPProject\\backend\\server\\server\\databaseFolder\\items\\items.txt",
               "RelativeDocumentMoniker": "server\\databaseFolder\\items\\items.txt",
               "ToolTip": "D:\\gam3a\\OOPProject\\backend\\server\\server\\databaseFolder\\items\\items.txt",
               "RelativeToolTip": "server\\databaseFolder\\items\\items.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-04-08T14:20:26.983Z",
+              "WhenOpened": "2024-04-09T13:10:59.351Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Item.cs",
               "DocumentMoniker": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Item.cs",
               "RelativeDocumentMoniker": "server\\Item.cs",
               "ToolTip": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Item.cs",
               "RelativeToolTip": "server\\Item.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAANAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAiwDEAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T12:51:06.134Z"
+              "WhenOpened": "2024-04-08T22:21:33.56Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Router.cs",
               "DocumentMoniker": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Router.cs",
               "RelativeDocumentMoniker": "server\\Router.cs",
               "ToolTip": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Router.cs",
               "RelativeToolTip": "server\\Router.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAUwDkAAAAiAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAYwDAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-06T23:44:37.801Z",
+              "WhenOpened": "2024-04-08T21:58:44.026Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Message.cs",
-              "DocumentMoniker": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Message.cs",
-              "RelativeDocumentMoniker": "server\\Message.cs",
-              "ToolTip": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Message.cs",
-              "RelativeToolTip": "server\\Message.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAYAAAA",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Program.cs",
+              "RelativeDocumentMoniker": "server\\Program.cs",
+              "ToolTip": "D:\\gam3a\\OOPProject\\backend\\server\\server\\Program.cs",
+              "RelativeToolTip": "server\\Program.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAgwFIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T19:25:15.41Z"
+              "WhenOpened": "2024-04-05T14:53:15.603Z",
+              "EditorCaption": ""
             }
           ]
         }

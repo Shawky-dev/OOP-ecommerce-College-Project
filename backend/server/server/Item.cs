@@ -6,9 +6,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.NetworkInformation;
 
 namespace server
 {
+
     internal class Item
     {
         public int Id { get; set; }
@@ -21,11 +23,48 @@ namespace server
 
         public void AddObjectToFile(object myObject, string filePath)
         {
-            using (StreamWriter file = File.AppendText(filePath))
+            string jsonString = "";
+            if (File.Exists(filePath))
             {
-                string jsonString = JsonConvert.SerializeObject(myObject);
-                file.WriteLine(jsonString);
+                jsonString = File.ReadAllText(filePath);
             }
+
+            // Check if the JSON string represents an array. If not, wrap it in an array.
+            if (!jsonString.Trim().StartsWith("[") || !jsonString.Trim().EndsWith("]"))
+            {
+                jsonString = $"[{jsonString}]";
+            }
+
+            // Deserialize the JSON string into a list of Item objects.
+            var list = JsonConvert.DeserializeObject<List<Item>>(jsonString);
+
+            // Add the new object to the list.
+            list.Add((Item)myObject);
+
+            // Serialize the list back into a JSON string.
+            var updatedJsonString = JsonConvert.SerializeObject(list, Formatting.Indented);
+
+            // Write the updated JSON string back to the file.
+            File.WriteAllText(filePath, updatedJsonString);
         }
+        public List<Item> GettAllObjects(string filePath)
+        {
+            string jsonString = "";
+            if (File.Exists(filePath))
+            {
+                jsonString = File.ReadAllText(filePath);
+            }
+
+            // Check if the JSON string represents an array. If not, wrap it in an array.
+            if (!jsonString.Trim().StartsWith("[") || !jsonString.Trim().EndsWith("]"))
+            {
+                jsonString = $"[{jsonString}]";
+            }
+
+            // Deserialize the JSON string into a list of Item objects.
+            var list = JsonConvert.DeserializeObject<List<Item>>(jsonString);
+            return list;
+        }
+
     }
 }

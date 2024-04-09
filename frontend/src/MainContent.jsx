@@ -14,23 +14,25 @@ const cardsData = [
 ];
 
 const MainContent = () => {
-    const [item, setItem] = useState('');
+    const [items, setItems] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:8080/items')
             .then(response => response.json())
-            .then(data => setItem(data))
+            .then(data => setItems(data))
             .catch(error => console.error('Error:', error));
     }, []);
-    console.log(item)
+    console.log(items)
 
     return (
         <Container>
             <Row>
-                <Col xs={12} md={6} lg={4}>
-                    <ItemCard title={item.Name} text={item.Description} ImageBase64={item.ImageBase64} Price={item.Price + "$"} SellerName={item.SellerId} />
-                </Col>
+                {items.map((card, index) => (
+                    <Col key={index} xs={12} md={6} lg={3}>
 
+                        <ItemCard title={card.Name} text={card.Description} ImageBase64={card.ImageBase64} Price={card.Price + "$"} SellerName={card.SellerId} />
+                    </Col>
+                ))}
             </Row>
         </Container>
     );
