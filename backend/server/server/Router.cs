@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
@@ -11,63 +11,71 @@ namespace server
 {
     public class Router
     {
-
-        private Dictionary<string, Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, object>>> routes = new Dictionary<string, Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, object>>>();
+        private Dictionary<List<string>, Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, object>>> routes = new Dictionary<List<string>, Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, object>>>();
 
         public void AddRoute(string path, string method, Func<HttpListenerContext, Dictionary<string, string>, object> handler)
         {
-            if (!routes.ContainsKey(path))
+            var segments = path.Split('/').Where(s => !string.IsNullOrEmpty(s)).ToList();
+            if (!routes.ContainsKey(segments))
             {
-                routes[path] = new Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, object>>();
+                routes[segments] = new Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, object>>();
             }
-            routes[path][method] = handler;
+            routes[segments][method] = handler;
         }
 
         public string ProcessRequest(HttpListenerContext context)
         {
             var path = context.Request.Url.AbsolutePath;
             var method = context.Request.HttpMethod;
+            string rawData = null;
 
-            if (routes.ContainsKey(path) && routes[path].ContainsKey(method))
+            switch (method)
             {
-                // Use a switch case to handle different HTTP methods
-                switch (method)
+                case "GET":
+                    break;
+
+                case "POST":
+                case "PUT":
+                    rawData = new StreamReader(context.Request.InputStream).ReadToEnd();
+                    break;
+
+                case "DELETE":
+                    break;
+
+                default:
+                    return JsonConvert.SerializeObject(new { message = "Unknown method" });
+            }
+
+            var requestSegments = path.Split('/').Where(s => !string.IsNullOrEmpty(s)).ToList();
+            foreach (var route in routes)
+            {
+                if (route.Key.Count != requestSegments.Count) continue;
+
+                var parameters = new Dictionary<string, string>();
+                bool match = true;
+                for (int i = 0; i < route.Key.Count; i++)
                 {
-                    case "GET":
-                        // Handle GET request
-                        var getResponseObject = routes[path][method](context, new Dictionary<string, string>());
-                        return JsonConvert.SerializeObject(getResponseObject);
+                    if (route.Key[i].StartsWith("{") && route.Key[i].EndsWith("}"))
+                    {
+                        // This is a parameter, store its value
+                        parameters[route.Key[i].Trim('{', '}')] = requestSegments[i];
+                    }
+                    else if (route.Key[i] != requestSegments[i])
+                    {
+                        // This segment does not match, break the loop
+                        match = false;
+                        break;
+                    }
+                }
 
-                    case "POST":
-                        // Handle POST request
-                        // Read the request body
-                        var requestBody = new StreamReader(context.Request.InputStream).ReadToEnd();
-                        // Parse the JSON string into a .NET object
-                        var postRequestData = JsonConvert.DeserializeObject<Dictionary<string, string>>(requestBody);
-                        var postResponseObject = routes[path][method](context, postRequestData);
-                        return JsonConvert.SerializeObject(postResponseObject);
-
-                    case "PUT":
-                        // Handle PUT request
-                        // Similar to POST, read and parse the request body
-                        var putRequestBody = new StreamReader(context.Request.InputStream).ReadToEnd();
-                        var putRequestData = JsonConvert.DeserializeObject<Dictionary<string, string>>(putRequestBody);
-                        var putResponseObject = routes[path][method](context, putRequestData);
-                        return JsonConvert.SerializeObject(putResponseObject);
-
-                    case "DELETE":
-                        // Handle DELETE request
-                        var deleteResponseObject = routes[path][method](context, new Dictionary<string, string>());
-                        return JsonConvert.SerializeObject(deleteResponseObject);
-
-                    default:
-                        return JsonConvert.SerializeObject(new { message = "Unknown method" });
+                if (match && route.Value.ContainsKey(method))
+                {
+                    var responseObject = route.Value[method](context, parameters);
+                    return JsonConvert.SerializeObject(responseObject);
                 }
             }
-            else
-            {
-                return JsonConvert.SerializeObject(new { message = "Unknown path or method" });
-            }
+
+            return JsonConvert.SerializeObject(new { message = "Unknown path or method" });
         }
     }
 }

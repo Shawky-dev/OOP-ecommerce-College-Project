@@ -71,17 +71,17 @@ class Program
         Router router = new Router();
         router.AddRoute("/", "GET", (context, requestData) =>
         {
-            // requestdata fucntion
-            return new { message = "Hello from ahmed" };
+
+            return new { message2 = requestData };
         });
         router.AddRoute("/items", "GET", (context, requestData) =>
         {
             return GetAllObjects<Item>(itemsPATH);
         });
-        router.AddRoute("/items/{id}", "DELETE", (context, requestData) =>
+        router.AddRoute("/items/{id}", "GET", (context, parameters) =>
         {
-            //code for deleteing objects from id
-            return new { message = "deleted item " };
+            var id = parameters["id"];
+            return new { message = $"Item {id} requested" };
         });
 
         while (true)
