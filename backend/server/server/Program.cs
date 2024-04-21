@@ -5,62 +5,22 @@ using System;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 class Program
 {
-    //FUNCTION TO ADD AND READ TXT FILES__________________
-    //A function using generics that reutns a LIST<t> with all objects in the given txt file
-    public static List<T> GetAllObjects<T>(string filePath)
+    public class MyObject : IIdentifiable
     {
-        string jsonString = "";
-        if (File.Exists(filePath))
-        {
-            jsonString = File.ReadAllText(filePath);
-        }
-
-        // checkif the JSON data is an array of not turn int intoi an array
-        if (!jsonString.Trim().StartsWith("[") || !jsonString.Trim().EndsWith("]"))
-        {
-            jsonString = $"[{jsonString}]";
-        }
-
-        // turn the Json array into a list
-        var list = JsonConvert.DeserializeObject<List<T>>(jsonString);
-        return list;
+        public int ID { get; set; }
     }
-    //a function using generics checks if a file exist then checks if 
-    public void AddObjectToFile<T>(T myObject, string filePath)
-    {
-        string jsonString = "";
-        if (File.Exists(filePath))
-        {
-            jsonString = File.ReadAllText(filePath);
-        }
-
-        //chgeck if the JSON data is an array of not turn int intoi an array
-        if (!jsonString.Trim().StartsWith("[") || !jsonString.Trim().EndsWith("]"))
-        {
-            jsonString = $"[{jsonString}]";
-        }
-
-        //turn json into list
-        var list = JsonConvert.DeserializeObject<List<T>>(jsonString);
-
-        //add object to the list
-        list.Add(myObject);
-
-        //turn list back into JSON array
-        var updatedJsonString = JsonConvert.SerializeObject(list, Formatting.Indented);
-
-        //write the jsonarray back into the txt file
-        File.WriteAllText(filePath, updatedJsonString);
-    }
-
-
 
     static void Main(string[] args)
     {
-        string itemsPATH = "D:\\gam3a\\OOPProject\\backend\\server\\server\\databaseFolder\\items\\items.txt";
+        //database object to hold the txt file paths
+        databasePaths Paths = new databasePaths();
+
+        Paths.ItemPath = @"databaseFolder\items\items.txt";
+        Console.WriteLine(Paths.ItemPath);
 
         //start up server
         HttpListener listener = new HttpListener();
@@ -68,6 +28,10 @@ class Program
         listener.Start();
         Console.WriteLine("Listening...");
         //intialize router and adding PATHS with their method types (GET,POST,Etc.)for incoming requets
+
+       
+
+
         Router router = new Router();
         router.AddRoute("/", "GET", (context, requestData) =>
         {
@@ -76,13 +40,31 @@ class Program
         });
         router.AddRoute("/items", "GET", (context, requestData) =>
         {
-            return GetAllObjects<Item>(itemsPATH);
+            return FileOperations.GetAllObjects<Item>(Paths.ItemPath);
         });
         router.AddRoute("/items/{id}", "GET", (context, parameters) =>
         {
-            var id = parameters["id"];
-            return new { message = $"Item {id} requested" };
+            int id = Int32.Parse(parameters["id"]);
+            //use item id to GET
+            return FileOperations.GetObjectByID<Item>(id, Paths.ItemPath);
+            ;
         });
+        router.AddRoute("/items/{id}", "DELETE", (context, parameters) =>
+        {
+            int id = Int32.Parse(parameters["id"]);
+            //use item id to GET
+            FileOperations.DeleteObjectByID<Item>(id,Paths.ItemPath);
+            return new { message = $"Item {id} has been deleted" };
+        });
+
+        router.AddRoute("/items/{id}","PUT", (context, parameters) =>
+        {
+
+
+        });
+
+
+
 
         while (true)
         {

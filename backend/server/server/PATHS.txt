@@ -1,0 +1,6 @@
+﻿/ GET sends message
+/items GET uses function GetAllObjects<items>(itemsPaths) and sends an array of objects to the front end
+/itms/{id} GET returns the object with the id
+/items/{id} DELETE finds objecet then deletes objec from file returns success message "ur items have been deleted"
+/newitem POST add the object to the file
+

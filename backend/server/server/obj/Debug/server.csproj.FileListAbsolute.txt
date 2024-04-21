@@ -9,3 +9,14 @@ D:\gam3a\OOPProject\backend\server\server\obj\Debug\server.exe
 D:\gam3a\OOPProject\backend\server\server\obj\Debug\server.pdb
 D:\gam3a\OOPProject\backend\server\server\bin\Debug\Newtonsoft.Json.dll
 D:\gam3a\OOPProject\backend\server\server\bin\Debug\Newtonsoft.Json.xml
+E:\gam3a2\OOP\OOP_Ecom\backend\server\server\bin\Debug\server.exe.config
+E:\gam3a2\OOP\OOP_Ecom\backend\server\server\bin\Debug\server.exe
+E:\gam3a2\OOP\OOP_Ecom\backend\server\server\bin\Debug\server.pdb
+E:\gam3a2\OOP\OOP_Ecom\backend\server\server\bin\Debug\Newtonsoft.Json.dll
+E:\gam3a2\OOP\OOP_Ecom\backend\server\server\bin\Debug\System.Net.Http.Formatting.dll
+E:\gam3a2\OOP\OOP_Ecom\backend\server\server\bin\Debug\Newtonsoft.Json.xml
+E:\gam3a2\OOP\OOP_Ecom\backend\server\server\obj\Debug\server.csproj.AssemblyReference.cache
+E:\gam3a2\OOP\OOP_Ecom\backend\server\server\obj\Debug\server.csproj.CoreCompileInputs.cache
+E:\gam3a2\OOP\OOP_Ecom\backend\server\server\obj\Debug\server.csproj.Up2Date
+E:\gam3a2\OOP\OOP_Ecom\backend\server\server\obj\Debug\server.exe
+E:\gam3a2\OOP\OOP_Ecom\backend\server\server\obj\Debug\server.pdb

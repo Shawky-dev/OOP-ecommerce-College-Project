@@ -23,8 +23,24 @@ namespace server
             routes[segments][method] = handler;
         }
 
+        private void LogRequestDetails(HttpListenerContext context)
+        {
+            Console.WriteLine("-----New Method----");
+            // Log the request method
+            Console.WriteLine($"Request URL: {context.Request.Url}");
+            Console.WriteLine($"Request Method: {context.Request.HttpMethod}");
+;            // Log the request URL
+            Console.WriteLine($"--Header-- \n {context.Request.Headers}");
+            Console.WriteLine($"------------");
+
+ 
+        }
+
         public string ProcessRequest(HttpListenerContext context)
         {
+            // Log the request details
+            LogRequestDetails(context);
+
             var path = context.Request.Url.AbsolutePath;
             var method = context.Request.HttpMethod;
             string rawData = null;
@@ -32,6 +48,7 @@ namespace server
             switch (method)
             {
                 case "GET":
+                    rawData = new StreamReader(context.Request.InputStream).ReadToEnd();
                     break;
 
                 case "POST":

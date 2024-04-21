@@ -13,26 +13,24 @@ const cardsData = [
     }
 ];
 
-const MainContent = () => {
-    const [items, setItems] = useState([]);
+const MainContent = ( {items}) => {
 
-    useEffect(() => {
-        fetch('http://localhost:8080/items')
-            .then(response => response.json())
-            .then(data => setItems(data))
-            .catch(error => console.error('Error:', error));
-    }, []);
-    console.log(items)
 
     return (
         <Container>
-            <Row>
+            <Row> 
+            {items ? (
+                <>
                 {items.map((card, index) => (
                     <Col key={index} xs={12} md={6} lg={3}>
-
+            
                         <ItemCard title={card.Name} text={card.Description} ImageBase64={card.ImageBase64} Price={card.Price + "$"} SellerName={card.SellerId} />
                     </Col>
                 ))}
+                </>
+) : (
+<p>no Data received yet</p>
+)}
             </Row>
         </Container>
     );

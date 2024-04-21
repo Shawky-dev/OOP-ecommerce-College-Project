@@ -5,6 +5,7 @@ import LeftSidebar from "./LeftSidebar";
 import MainContent from './MainContent';
 function App() {
   const [message, setMessage] = useState('');
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:8080/')
@@ -13,6 +14,13 @@ function App() {
       .catch(error => console.error('Error:', error));
   }, []);
 
+  useEffect(() => {
+      fetch('http://localhost:8080/items')
+          .then(response => response.json())
+          .then(data => setItems(data))
+          .catch(error => console.error('Error:', error));
+  }, []);
+  console.log(items)
   return (
     <div>
       <Header />
@@ -22,7 +30,7 @@ function App() {
             <LeftSidebar />
           </Col>
           <Col xs={10} id="page-content-wrapper" style={{ marginTop: "40px" }}>
-            <MainContent />
+            <MainContent items = {items} />
           </Col>
         </Row>
       </Container>
