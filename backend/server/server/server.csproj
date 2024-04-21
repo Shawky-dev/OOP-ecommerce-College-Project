@@ -37,6 +37,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="customer.cs" />
+    <Compile Include="users.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="databasePaths.cs" />
     <Compile Include="FileOperations.cs" />
