@@ -1,0 +1,25 @@
+Dexter,Morgan,Dex@Gmail.com,SliceOfLife,(666)301-1973,Miami
+John,Smith,john.smith@example.com,Password123!,(555)555-5555,New York City
+Sarah,Johnson,sarah.johnson@email.com,SecurePass12,(123)456-7890,Los Angeles
+Michael,Williams,michael.w@example.com,Passw0rd!,(987)654-3210,Chicago
+Emily,Brown,emily.brown@email.com,Brownie@123,(111)222-3333,Houston
+David,Jones,david.jones@example.com,JonesDavid#1,(444)555-6666,Miami
+Jennifer,Martinez,jennifer.m@email.com,JMartinez2020!,(777)888-9999,San Francisco
+Christopher,Lee,chris.lee@example.com,L33tPassword,(333)222-1111,Seattle
+Jessica,Rodriguez,jessica.r@email.com,R0driguezJ#2024,(999)888-7777,Dallas
+Matthew,Taylor,matthew.taylor@example.com,TaylorMade2023,(666)555-4444,Atlanta
+Amanda,Nguyen,amanda.nguyen@email.com,Nguy3nAmanda$,(222)333-4444,Boston
+Joshua,Garcia,joshua.g@email.com,GarciaJoshua12,(888)999-0000,Phoenix
+Nicole,Allen,nicole.a@example.com,All3nNicole!,(777)666-5555,Denver
+Daniel,Scott,daniel.s@example.com,ScottD@123,(555)666-7777,Philadelphia
+Kimberly,Young,kim.young@email.com,Y0ungKim2024,(333)444-5555,San Diego
+Ryan,Hernandez,ryan.h@email.com,RyaN1234!,(999)888-7777,Washington D.C.
+Maria,Chavez,maria.c@example.com,Ch@vezMaria2024,(111)222-3333,Orlando
+Brandon,Lewis,brandon.l@email.com,L3w1sBranD0n#,(777)666-5555,Austin
+Amanda,Wright,amanda.w@email.com,Wr1ghtAmanda#,(444)555-6666,Portland
+Kevin,Nguyen,kevin.n@example.com,K3vinNguy3n$,(222)333-4444,Minneapolis
+Melissa,Martinez,melissa.m@email.com,M3lissaMartinez!,(888)999-0000,Las Vegas
+Eric,Johnson,eric.j@example.com,JohnsonEriC#2023,(777)888-9999,Nashville
+Rachel,Baker,rachel.b@email.com,B@kerRachel123,(555)666-7777,Charlotte
+Patrick,Davis,patrick.d@example.com,Davi$Patrick2022,(333)444-5555,Detroit
+Lauren,Garcia,lauren.g@email.com,G@rciaLaur3n!,(999)888-7777,Honolulu
