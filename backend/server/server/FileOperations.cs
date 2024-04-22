@@ -77,9 +77,19 @@ public class FileOperations
         AddObjectToFile<T>(newObject, filePath);
 
     }
+    public static List<T> GetAllObjectsFromSearch<T>(string search, string filePath) where T : class, IIdentifiable, INameable
+    {
+        var allObjects = GetAllObjects<T>(filePath);
+        var filteredObjects = allObjects.Where(obj => obj.Name.StartsWith(search, StringComparison.OrdinalIgnoreCase)).ToList();
+        return filteredObjects;
+    }
 }
 
 public interface IIdentifiable
 {
     int ID { get; set; }
+}
+public interface INameable
+{
+    string Name { get; set; }
 }

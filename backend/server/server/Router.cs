@@ -6,19 +6,20 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using server;
 
 namespace server
 {
     public class Router
     {
-        private Dictionary<List<string>, Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, object>>> routes = new Dictionary<List<string>, Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, object>>>();
+        private Dictionary<List<string>, Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, string, object>>> routes = new Dictionary<List<string>, Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, string, object>>>();
 
-        public void AddRoute(string path, string method, Func<HttpListenerContext, Dictionary<string, string>, object> handler)
+        public void AddRoute(string path, string method, Func<HttpListenerContext, Dictionary<string, string>, string, object> handler)
         {
             var segments = path.Split('/').Where(s => !string.IsNullOrEmpty(s)).ToList();
             if (!routes.ContainsKey(segments))
             {
-                routes[segments] = new Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, object>>();
+                routes[segments] = new Dictionary<string, Func<HttpListenerContext, Dictionary<string, string>, string, object>>();
             }
             routes[segments][method] = handler;
         }
@@ -26,42 +27,22 @@ namespace server
         private void LogRequestDetails(HttpListenerContext context)
         {
             Console.WriteLine("-----New Method----");
-            // Log the request method
             Console.WriteLine($"Request URL: {context.Request.Url}");
             Console.WriteLine($"Request Method: {context.Request.HttpMethod}");
-;            // Log the request URL
             Console.WriteLine($"--Header-- \n {context.Request.Headers}");
             Console.WriteLine($"------------");
-
- 
         }
 
         public string ProcessRequest(HttpListenerContext context)
         {
-            // Log the request details
             LogRequestDetails(context);
 
             var path = context.Request.Url.AbsolutePath;
             var method = context.Request.HttpMethod;
-            string rawData = null;
+            string requestBody = null;
 
-            switch (method)
-            {
-                case "GET":
-                    rawData = new StreamReader(context.Request.InputStream).ReadToEnd();
-                    break;
-
-                case "POST":
-                case "PUT":
-                    rawData = new StreamReader(context.Request.InputStream).ReadToEnd();
-                    break;
-
-                case "DELETE":
-                    break;
-
-                default:
-                    return JsonConvert.SerializeObject(new { message = "Unknown method" });
-            }
+            // Always read the request body, regardless of the method
+            requestBody = new StreamReader(context.Request.InputStream).ReadToEnd();
 
             var requestSegments = path.Split('/').Where(s => !string.IsNullOrEmpty(s)).ToList();
             foreach (var route in routes)
@@ -74,12 +55,10 @@ namespace server
                 {
                     if (route.Key[i].StartsWith("{") && route.Key[i].EndsWith("}"))
                     {
-                        // This is a parameter, store its value
                         parameters[route.Key[i].Trim('{', '}')] = requestSegments[i];
                     }
                     else if (route.Key[i] != requestSegments[i])
                     {
-                        // This segment does not match, break the loop
                         match = false;
                         break;
                     }
@@ -87,7 +66,7 @@ namespace server
 
                 if (match && route.Value.ContainsKey(method))
                 {
-                    var responseObject = route.Value[method](context, parameters);
+                    var responseObject = route.Value[method](context, parameters, requestBody);
                     return JsonConvert.SerializeObject(responseObject);
                 }
             }

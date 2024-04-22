@@ -13,7 +13,7 @@ const cardsData = [
     }
 ];
 
-const MainContent = ( {items}) => {
+const MainContent = ({items}) => {
 
 
     return (

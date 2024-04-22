@@ -1,42 +1,44 @@
-import { Container, Row, Col, ListGroup, Card } from 'react-bootstrap';
-import { useEffect, useState } from "react";
-import Header from './Header'
-import LeftSidebar from "./LeftSidebar";
-import MainContent from './MainContent';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import BrowsingPage from './pages/Browsing/Browsing.jsx';
+import AAhmed from './AAhmed.jsx';
+import Login from './pages/Login/Login.jsx';
+
 function App() {
-  const [message, setMessage] = useState('');
-  const [items, setItems] = useState([]);
+ const [isLoggedIn, setIsLoggedIn] = useState(false);
+ const [isCustomer, setIsCustomer] = useState(false);
 
-  useEffect(() => {
-    fetch('http://localhost:8080/')
-      .then(response => response.json())
-      .then(data => setMessage(data.message))
-      .catch(error => console.error('Error:', error));
-  }, []);
+ useEffect(() => {
+    const loggedIn = localStorage.getItem('isLoggedIn');
+    const customer = localStorage.getItem('isCustomer');
+    setIsLoggedIn(loggedIn ? JSON.parse(loggedIn) : false);
+    setIsCustomer(customer ? JSON.parse(customer) : false);
+ }, []);
 
-  useEffect(() => {
-      fetch('http://localhost:8080/items')
-          .then(response => response.json())
-          .then(data => setItems(data))
-          .catch(error => console.error('Error:', error));
-  }, []);
-  console.log(items)
-  return (
-    <div>
-      <Header />
-      <Container fluid>
-        <Row>
-          <Col xs={2} id="sidebar-wrapper" style={{ marginTop: "40px" }}>
-            <LeftSidebar />
-          </Col>
-          <Col xs={10} id="page-content-wrapper" style={{ marginTop: "40px" }}>
-            <MainContent items = {items} />
-          </Col>
-        </Row>
-      </Container>
-      <h1>{message}</h1>
+ const handleLogin = (isLoggedIn, isCustomer) => {
+    setIsLoggedIn(isLoggedIn);
+    setIsCustomer(isCustomer);
+    localStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn));
+    localStorage.setItem('isCustomer', JSON.stringify(isCustomer));
+ };
+
+ const handleLogout = () => {
+    setIsLoggedIn(false);
+    setIsCustomer(false);
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('isCustomer');
+ };
+
+ return (
+    <div style={{ backgroundColor: '#393E46', height: "100vh" }}>
+      <Router>
+        <Routes>
+          <Route path="/" element={isLoggedIn ? <BrowsingPage /> : <Navigate to="/Login" />} />
+          <Route path="/Login" element={<Login onLogin={handleLogin} onLogout={handleLogout} />} />
+        </Routes>
+      </Router>
     </div>
-  );
+ );
 }
 
 export default App;

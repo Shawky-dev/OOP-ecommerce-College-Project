@@ -29,37 +29,59 @@ class Program
         Console.WriteLine("Listening...");
         //intialize router and adding PATHS with their method types (GET,POST,Etc.)for incoming requets
 
-       
+
 
 
         Router router = new Router();
-        router.AddRoute("/", "GET", (context, requestData) =>
-        {
-
-            return new { message2 = requestData };
-        });
-        router.AddRoute("/items", "GET", (context, requestData) =>
+        //router ITEMS paths
+        router.AddRoute("/items", "GET", (context, requestData, requestBody) =>
         {
             return FileOperations.GetAllObjects<Item>(Paths.ItemPath);
         });
-        router.AddRoute("/items/{id}", "GET", (context, parameters) =>
+        router.AddRoute("/items/{id}", "GET", (context, parameters, requestBody) =>
         {
             int id = Int32.Parse(parameters["id"]);
             //use item id to GET
             return FileOperations.GetObjectByID<Item>(id, Paths.ItemPath);
-            ;
+
         });
-        router.AddRoute("/items/{id}", "DELETE", (context, parameters) =>
+        router.AddRoute("/items/{id}", "DELETE", (context, parameters, requestBody) =>
         {
             int id = Int32.Parse(parameters["id"]);
             //use item id to GET
-            FileOperations.DeleteObjectByID<Item>(id,Paths.ItemPath);
-            return new { message = $"Item {id} has been deleted" };
+            FileOperations.DeleteObjectByID<Item>(id, Paths.ItemPath);
+            return new { message = $"Item with id:{id} has been deleted" };
         });
 
-        router.AddRoute("/items/{id}","PUT", (context, parameters) =>
+        router.AddRoute("/items/{id}", "PUT", (context, parameters, requestBody) =>
+        {
+            int id = Int32.Parse(parameters["id"]);
+
+            var newobject = JsonConvert.DeserializeObject<Item>(requestBody);
+            FileOperations.ChangeObjectByID<Item>(id, newobject, Paths.ItemPath);
+
+            return new { message = $"Item has been changed" };
+        });
+        router.AddRoute("/newitem", "POST", (context, parameters, requestBody) =>
         {
 
+            var newobject = JsonConvert.DeserializeObject<Item>(requestBody);
+            FileOperations.AddObjectToFile<Item>(newobject, Paths.ItemPath);
+            return new { message = $"Item has been added" };
+        });
+
+        router.AddRoute("/search/{id}", "GET", (context, parameters, requestBody) =>
+        {
+            var id = parameters["id"];
+            if(id != "*")
+            {
+                return FileOperations.GetAllObjectsFromSearch<Item>(id, Paths.ItemPath);
+            }
+            else
+            {
+                
+                return FileOperations.GetAllObjects<Item>(Paths.ItemPath);
+            }
 
         });
 
