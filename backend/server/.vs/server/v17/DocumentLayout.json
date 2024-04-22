@@ -3,48 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|c:\\users\\me\\source\\repos\\shawky-dev\\oop_ecom\\backend\\server\\server\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|c:\\users\\me\\source\\repos\\shawky-dev\\oop_ecom\\backend\\server\\server\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\databasepaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\databasepaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\itemcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\itemcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\router.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\router.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\databasefolder\\items\\items.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\databasefolder\\items\\items.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\databasefolder\\user\\admin.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\databasefolder\\user\\admin.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,15 +38,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Program.cs",
-              "RelativeDocumentMoniker": "server\\Program.cs",
-              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Program.cs",
-              "RelativeToolTip": "server\\Program.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAADwvzkAAAALAAAA",
+              "DocumentIndex": 4,
+              "Title": "users.cs",
+              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\users.cs",
+              "RelativeDocumentMoniker": "server\\users.cs",
+              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\users.cs",
+              "RelativeToolTip": "server\\users.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T14:53:15.603Z",
+              "WhenOpened": "2024-04-22T21:26:30.087Z",
               "IsPinned": true
             },
             {
@@ -80,127 +60,67 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "users.cs",
-              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\users.cs",
-              "RelativeDocumentMoniker": "server\\users.cs",
-              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\users.cs",
-              "RelativeToolTip": "server\\users.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T21:57:27.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "customer.cs",
               "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\customer.cs",
               "RelativeDocumentMoniker": "server\\customer.cs",
               "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\customer.cs",
               "RelativeToolTip": "server\\customer.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAFAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAwAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T23:12:15.864Z"
+              "WhenOpened": "2024-04-22T21:12:16.345Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "databasePaths.cs",
-              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\databasePaths.cs",
-              "RelativeDocumentMoniker": "server\\databasePaths.cs",
-              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\databasePaths.cs",
-              "RelativeToolTip": "server\\databasePaths.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABFAAAA",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Program.cs",
+              "RelativeDocumentMoniker": "server\\Program.cs",
+              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Program.cs",
+              "RelativeToolTip": "server\\Program.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAwD8AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T21:07:05.321Z"
+              "WhenOpened": "2024-04-22T21:28:36.581Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Controller.cs",
-              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Controller.cs",
-              "RelativeDocumentMoniker": "server\\Controller.cs",
-              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Controller.cs",
-              "RelativeToolTip": "server\\Controller.cs",
+              "Title": "admin.txt",
+              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\user\\admin.txt",
+              "RelativeDocumentMoniker": "server\\databaseFolder\\user\\admin.txt",
+              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\user\\admin.txt",
+              "RelativeToolTip": "server\\databaseFolder\\user\\admin.txt",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T21:40:32.926Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-04-22T21:25:24.742Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
+              "Title": "itemcart.cs",
+              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\itemcart.cs",
+              "RelativeDocumentMoniker": "server\\itemcart.cs",
+              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\itemcart.cs",
+              "RelativeToolTip": "server\\itemcart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T21:09:06.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Item.cs",
               "RelativeDocumentMoniker": "server\\Item.cs",
               "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Item.cs",
               "RelativeToolTip": "server\\Item.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABQAAAAnAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABIAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-21T21:23:08.235Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "items.txt",
-              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\items\\items.txt",
-              "RelativeDocumentMoniker": "server\\databaseFolder\\items\\items.txt",
-              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\items\\items.txt",
-              "RelativeToolTip": "server\\databaseFolder\\items\\items.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-04-21T21:18:35.374Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FileOperations.cs",
-              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\FileOperations.cs",
-              "RelativeDocumentMoniker": "server\\FileOperations.cs",
-              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\FileOperations.cs",
-              "RelativeToolTip": "server\\FileOperations.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAAAEwAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T21:06:45.823Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Router.cs",
-              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Router.cs",
-              "RelativeDocumentMoniker": "server\\Router.cs",
-              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Router.cs",
-              "RelativeToolTip": "server\\Router.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAC0AAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T21:00:31.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "packages.config",
-              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\packages.config",
-              "RelativeDocumentMoniker": "server\\packages.config",
-              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\packages.config",
-              "RelativeToolTip": "server\\packages.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-04-21T21:12:20.239Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Message.cs",
-              "DocumentMoniker": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Message.cs",
-              "RelativeDocumentMoniker": "server\\Message.cs",
-              "ToolTip": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\server\\Message.cs",
-              "RelativeToolTip": "server\\Message.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T21:10:28.859Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

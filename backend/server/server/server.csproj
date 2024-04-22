@@ -37,6 +37,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="itemcart.cs" />
     <Compile Include="customer.cs" />
     <Compile Include="users.cs" />
     <Compile Include="Controller.cs" />
@@ -68,6 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="databaseFolder\items\items.txt" />
+    <Content Include="databaseFolder\shoppingcart\cart.txt" />
+    <Content Include="databaseFolder\user\admin.txt" />
+    <Content Include="databaseFolder\user\customer.txt" />
     <Content Include="PATHS.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
