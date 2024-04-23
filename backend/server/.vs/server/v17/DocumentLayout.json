@@ -1,28 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\databasefolder\\customers\\customers.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\databasefolder\\customers\\customers.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\databasefolder\\admins\\admins.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\databasefolder\\admins\\admins.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\classes\\user\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\classes\\user\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\me\\source\\repos\\Shawky-dev\\OOP_Ecom\\backend\\server\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 886,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,69 +20,8 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FileOperations.cs",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\FileOperations.cs",
-              "RelativeDocumentMoniker": "server\\FileOperations.cs",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\FileOperations.cs",
-              "RelativeToolTip": "server\\FileOperations.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAYwEEAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T17:21:29.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\Program.cs",
-              "RelativeDocumentMoniker": "server\\Program.cs",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\Program.cs",
-              "RelativeToolTip": "server\\Program.cs",
-              "ViewState": "AQIAAL4AAAAAAAAAAAAAAMIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T17:10:03.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "customer.cs",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\customer.cs",
-              "RelativeDocumentMoniker": "server\\classes\\user\\customer.cs",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\customer.cs",
-              "RelativeToolTip": "server\\classes\\user\\customer.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAowAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T17:04:34.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "admins.txt",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\admins\\admins.txt",
-              "RelativeDocumentMoniker": "server\\databaseFolder\\admins\\admins.txt",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\admins\\admins.txt",
-              "RelativeToolTip": "server\\databaseFolder\\admins\\admins.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-04-23T16:24:12.944Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "customers.txt",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\customers\\customers.txt",
-              "RelativeDocumentMoniker": "server\\databaseFolder\\customers\\customers.txt",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\customers\\customers.txt",
-              "RelativeToolTip": "server\\databaseFolder\\customers\\customers.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-04-23T16:10:03.216Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

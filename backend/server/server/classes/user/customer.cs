@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,22 @@ namespace server
         public static int IDGen = 0;
         public string Name {  get; set; }
         public int ID {  get; set; }
-        public string Address {  get; set; }
+        private string Address;
+        public string addressProperty
+        {
+
+            get
+            {
+
+                return Address;
+            }
+            set
+            {
+                Address = value;
+            }
+
+
+        }
         public List<itemcart> userCart;
 
 
@@ -69,7 +85,10 @@ namespace server
             userCart = null;
 
         }
-
+        public override string welcomeMsg()
+        {
+            return base.welcomeMsg() + Name;
+        }
     }
 
 }

@@ -12,7 +12,13 @@ namespace server.classes.user
         public string Password {  get; set; }
         public string Email {  get; set; }
         public string ProfilePictureBase64 {  get; set; }
+        public virtual string welcomeMsg()
+        {
 
+
+
+            return "Welcome! ";
+        }
  
 
     }

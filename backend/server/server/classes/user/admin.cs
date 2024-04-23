@@ -14,10 +14,13 @@ namespace server
         public string Name { get; set; }
         public int ID { get; set; }
 
+        public override string welcomeMsg()
+        {
+            return base.welcomeMsg() + Name;
+        }
 
 
 
-       
     }
 
 }
