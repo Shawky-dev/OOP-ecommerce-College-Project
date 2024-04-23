@@ -12,6 +12,7 @@ namespace server
         string serverDirectory = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"..\.."));
         string itemsPath;
         string customerPath;
+        string adminPath;
 
         public string ItemPath
         {
@@ -23,6 +24,10 @@ namespace server
             get { return customerPath; }
             set { customerPath = Path.Combine(serverDirectory, value); }
         }
-
+        public string AdminPath
+        {
+            get { return adminPath; }
+            set { adminPath = Path.Combine(serverDirectory, value); }
+        }
     }
 }

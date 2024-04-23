@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace server
 {
-    public class customer : user,IIdentifiable, INameable
+    public class customer : user,IIdentifiable, INameable,IAccountable
     {
         public static int IDGen = 0;
         public string Name {  get; set; }
         public int ID {  get; set; }
-        public string address {  get; set; }
+        public string Address {  get; set; }
         public List<itemcart> userCart;
 
 

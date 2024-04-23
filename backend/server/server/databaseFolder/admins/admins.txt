@@ -1,9 +1,7 @@
 [
   {
-    "userCart": null,
-    "Name": "ahmeCust",
+    "Name": "ahmedAdmin",
     "ID": 1,
-    "Address": "123",
     "Password": "123",
     "Email": "ahmed@1.com",
     "ProfilePictureBase64": null

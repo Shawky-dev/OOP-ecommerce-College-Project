@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ namespace server.classes.user
         public string Password {  get; set; }
         public string Email {  get; set; }
         public string ProfilePictureBase64 {  get; set; }
+
+ 
 
     }
 }

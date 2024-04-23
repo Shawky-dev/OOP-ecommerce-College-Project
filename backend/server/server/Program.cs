@@ -18,6 +18,7 @@ class Program
 
         Paths.ItemPath = @"databaseFolder\items\items.txt";
         Paths.CustomerPath = @"databaseFolder\customers\customers.txt";
+        Paths.AdminPath = @"databaseFolder\admins\admins.txt";
 
         //start up server
         HttpListener listener = new HttpListener();
@@ -90,12 +91,28 @@ class Program
         });
         router.AddRoute("/newCustomer", "POST", (context, parameters, requestBody) =>
         {
-
             var newobject = JsonConvert.DeserializeObject<customer>(requestBody);
-            FileOperations.AddObjectToFile<customer>(newobject, Paths.CustomerPath);
+            if(FileOperations.GetUserByEmail<customer>(newobject.Email, Paths.CustomerPath) == null)
+            {
+                var allobjects = FileOperations.GetAllObjects<customer>(Paths.CustomerPath);
+                var id = IDGenerator.GenerateUniqueID<customer>(allobjects);
+                newobject.ID = id;
+                FileOperations.AddObjectToFile<customer>(newobject, Paths.CustomerPath);
+            return new { message = $"user has been added",
+                         user = newobject,
+                         code = 200
+            };
+            }
+            else
+            {
+                return new
+                {
+                    message = "email already exists",
+                    code = 409
+                };
+            }
 
 
-            return new { message = $"user has been added" };
         });
         router.AddRoute("/customers/{id}", "GET", (context, parameters, requestBody) =>
         {
@@ -121,6 +138,8 @@ class Program
 
             return new { message = $"Item has been changed" };
         });
+
+
         router.AddRoute("/authCustomer", "POST", (context, parameters, requestBody) =>
         {
 
@@ -128,9 +147,80 @@ class Program
             string email = jsonObject["Email"].ToString();
             string password = jsonObject["Password"].ToString();
 
-            var customer = FileOperations.GetCustomerByEmail(email, Paths.CustomerPath);
+            var customer = FileOperations.GetUserByEmail<customer>(email, Paths.CustomerPath);
 
-            return FileOperations.CheckCustomerPassword(customer,password);
+            return FileOperations.CheckUserPassword<customer>(customer,password);
+        });
+
+        //AdminRoutes__________
+        router.AddRoute("/admins", "GET", (context, requestData, requestBody) =>
+        {
+            return FileOperations.GetAllObjects<admin>(Paths.AdminPath);
+        });
+
+        router.AddRoute("/newAdmin", "POST", (context, parameters, requestBody) =>
+        {
+            var newobject = JsonConvert.DeserializeObject<admin>(requestBody);
+            if (FileOperations.GetUserByEmail<admin>(newobject.Email, Paths.AdminPath) == null)
+            {
+                var allobjects = FileOperations.GetAllObjects<admin>(Paths.AdminPath);
+                var id = IDGenerator.GenerateUniqueID<admin>(allobjects);
+                newobject.ID = id;
+                FileOperations.AddObjectToFile<admin>(newobject, Paths.AdminPath);
+                return new
+                {
+                    message = $"user has been added",
+                    user = newobject,
+                    code = 200
+                };
+            }
+            else
+            {
+                return new
+                {
+                    message = "email already exists",
+                    code = 409
+                };
+            }
+
+
+        });
+
+        router.AddRoute("/admins/{id}", "GET", (context, parameters, requestBody) =>
+        {
+
+            int id = Int32.Parse(parameters["id"]);
+            //use item id to GET
+            return FileOperations.GetObjectByID<admin>(id, Paths.AdminPath);
+
+        });
+        router.AddRoute("/admins/{id}", "DELETE", (context, parameters, requestBody) =>
+        {
+            int id = Int32.Parse(parameters["id"]);
+            //use item id to GET
+            FileOperations.DeleteObjectByID<admin>(id, Paths.AdminPath);
+            return new { message = $"Item with id:{id} has been deleted" };
+        });
+
+        router.AddRoute("/admins/{id}", "PUT", (context, parameters, requestBody) =>
+        {
+            int id = Int32.Parse(parameters["id"]);
+
+            var newobject = JsonConvert.DeserializeObject<admin>(requestBody);
+            FileOperations.ChangeObjectByID<admin>(id, newobject, Paths.AdminPath);
+
+            return new { message = $"Item has been changed" };
+        });
+        router.AddRoute("/authAdmin", "POST", (context, parameters, requestBody) =>
+        {
+
+            JObject jsonObject = JObject.Parse(requestBody);
+            string email = jsonObject["Email"].ToString();
+            string password = jsonObject["Password"].ToString();
+
+            var admin = FileOperations.GetUserByEmail<admin>(email, Paths.AdminPath);
+
+            return FileOperations.CheckUserPassword<admin>(admin, password);
         });
 
 

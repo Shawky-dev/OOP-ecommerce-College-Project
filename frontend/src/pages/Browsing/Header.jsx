@@ -1,21 +1,38 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import CustomerNav from './CustomerNav';
+import AdminNav from './AdminNav'; // Assuming you have an AdminNav component
+import { useNavigate } from 'react-router-dom';
 
 function MyNavbar({ onSearchUpdate }) {
-    // Step 2: Create a state variable to hold the search input value
-    const [searchValue, setSearchValue] = useState('');
-
-    // Step 4: Add an onClick handler to the Button
+    const [searchValue, setSearchValue] = React.useState('');
+    const navigate = useNavigate();
+    
     const handleSearch = (event) => {
         event.preventDefault();
         if(searchValue){
-
             onSearchUpdate(searchValue);
             console.log(searchValue);
-        }else{
-
+        } else {
             onSearchUpdate("*");
         }
+    };
+
+    // Function to check if the user is logged in
+    const isLoggedIn = () => {
+        return localStorage.getItem('IsLogged') === 'true';
+    };
+
+    // Function to get the user's role from localStorage
+    const getUserRole = () => {
+        return localStorage.getItem('role');
+    };
+    const getUserID = () => {
+        return localStorage.getItem('id');
+    };
+
+    const handleLoginClick = () => {
+        navigate('/login'); // Navigate to the /login route
     };
 
     return (
@@ -23,7 +40,7 @@ function MyNavbar({ onSearchUpdate }) {
             <Navbar.Brand href="#home"><img src="../assets/logo-white-new1.png" style={{ width: '100px', marginLeft: '20px' }} alt="" /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-            <Form inline="true" className="mx-auto d-flex" onSubmit={handleSearch}>
+                <Form inline="true" className="mx-auto d-flex" onSubmit={handleSearch}>
                     <FormControl
                         type="text"
                         placeholder="Search"
@@ -35,21 +52,15 @@ function MyNavbar({ onSearchUpdate }) {
                     <Button variant="outline-success" style={{ marginLeft: '10px' }} type="submit">Search</Button>
                 </Form>
                 
-                <Nav className="ml-auto" style={{ marginRight: '20px' }}>
-                    <NavDropdown title="Actions" id="basic-nav-dropdown" >
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something else here</NavDropdown.Item>
-                    </NavDropdown>
-                    <NavDropdown title="Account" id="basic-nav-dropdown" >
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something else here</NavDropdown.Item>
-                    </NavDropdown>
-                    <Nav.Link href="#cart">
-                        <img src="../assets/cart.png" style={{ width: '30px', marginLeft: '30px' }} alt="" />
-                    </Nav.Link>
-                </Nav>
+                {isLoggedIn() ? (
+                    getUserRole() === 'customer' ? (
+                        <CustomerNav id ={getUserID()}/>
+                    ) : (
+                        <AdminNav id = {getUserID()}/>
+                    )
+                ) : (
+                    <Button variant="outline-success" className="ml-auto" style={{ marginRight: '20px' }} onClick={handleLoginClick}>Login/Signup</Button>
+                )}
             </Navbar.Collapse>
         </Navbar>
     );

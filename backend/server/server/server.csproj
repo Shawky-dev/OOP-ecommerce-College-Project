@@ -37,6 +37,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\user\admin.cs" />
     <Compile Include="classes\user\customer.cs" />
     <Compile Include="classes\user\itemcart.cs" />
     <Compile Include="classes\user\user.cs" />
@@ -44,6 +45,7 @@
     <Compile Include="databasePaths.cs" />
     <Compile Include="FileOperations.cs" />
     <Compile Include="classes\Item.cs" />
+    <Compile Include="IDGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Router.cs" />
   </ItemGroup>
@@ -67,6 +69,7 @@
     <Folder Include="databaseFolder\images\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="databaseFolder\admins\admins.txt" />
     <Content Include="databaseFolder\customers\customers.txt" />
     <Content Include="databaseFolder\items\items.txt" />
   </ItemGroup>

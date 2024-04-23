@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using server;
+using server.classes.user;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -85,13 +86,14 @@ public class FileOperations
         return filteredObjects;
     }
 
-    public static customer GetCustomerByEmail(string Email, string filePath) { 
+    public static T GetUserByEmail<T>(string Email, string filePath) where T : class,IAccountable
+    { 
 
-        var allObjects = GetAllObjects<customer>(filePath);
+        var allObjects = GetAllObjects<T>(filePath);
         var foundObject = allObjects.FirstOrDefault(obj => obj.Email == Email);
         return foundObject;
     }
-    public static object CheckCustomerPassword(customer customer, string password)
+    public static object CheckUserPassword<T>(T customer, string password) where T:class,IAccountable,IIdentifiable
     {
         if (customer == null)
         {
@@ -124,8 +126,14 @@ public class FileOperations
 public interface IIdentifiable
 {
     int ID { get; set; }
+
 }
 public interface INameable
 {
     string Name { get; set; }
+}
+public interface IAccountable
+{
+    string Email { get; set; }
+    string Password { get; set; }
 }
