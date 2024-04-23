@@ -1,0 +1,20 @@
+[
+  {
+    "userCart": [],
+    "Name": "John Doe",
+    "ID": 1,
+    "address": "123 Main St",
+    "Password": "password123",
+    "Email": "customer1@example.com",
+    "ProfilePictureBase64": "base64EncodedImageString"
+  },
+  {
+    "userCart": [],
+    "Name": "John Doe",
+    "ID": 2,
+    "address": "123 Main St",
+    "Password": "password123",
+    "Email": "customer2@example.com",
+    "ProfilePictureBase64": "base64EncodedImageString"
+  }
+]

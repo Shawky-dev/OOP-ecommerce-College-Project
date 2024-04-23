@@ -6,13 +6,10 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Newtonsoft.Json.Linq;
 
 class Program
 {
-    public class MyObject : IIdentifiable
-    {
-        public int ID { get; set; }
-    }
 
     static void Main(string[] args)
     {
@@ -20,7 +17,7 @@ class Program
         databasePaths Paths = new databasePaths();
 
         Paths.ItemPath = @"databaseFolder\items\items.txt";
-        Console.WriteLine(Paths.ItemPath);
+        Paths.CustomerPath = @"databaseFolder\customers\customers.txt";
 
         //start up server
         HttpListener listener = new HttpListener();
@@ -70,6 +67,7 @@ class Program
             return new { message = $"Item has been added" };
         });
 
+
         router.AddRoute("/search/{id}", "GET", (context, parameters, requestBody) =>
         {
             var id = parameters["id"];
@@ -83,6 +81,56 @@ class Program
                 return FileOperations.GetAllObjects<Item>(Paths.ItemPath);
             }
 
+        });
+
+        //Router customers
+        router.AddRoute("/customers", "GET", (context, requestData, requestBody) =>
+        {
+            return FileOperations.GetAllObjects<customer>(Paths.CustomerPath);
+        });
+        router.AddRoute("/newCustomer", "POST", (context, parameters, requestBody) =>
+        {
+
+            var newobject = JsonConvert.DeserializeObject<customer>(requestBody);
+            FileOperations.AddObjectToFile<customer>(newobject, Paths.CustomerPath);
+
+
+            return new { message = $"user has been added" };
+        });
+        router.AddRoute("/customers/{id}", "GET", (context, parameters, requestBody) =>
+        {
+            int id = Int32.Parse(parameters["id"]);
+            //use item id to GET
+            return FileOperations.GetObjectByID<customer>(id, Paths.CustomerPath);
+
+        });
+        router.AddRoute("/customers/{id}", "DELETE", (context, parameters, requestBody) =>
+        {
+            int id = Int32.Parse(parameters["id"]);
+            //use item id to GET
+            FileOperations.DeleteObjectByID<customer>(id, Paths.CustomerPath);
+            return new { message = $"Item with id:{id} has been deleted" };
+        });
+
+        router.AddRoute("/customers/{id}", "PUT", (context, parameters, requestBody) =>
+        {
+            int id = Int32.Parse(parameters["id"]);
+
+            var newobject = JsonConvert.DeserializeObject<customer>(requestBody);
+            FileOperations.ChangeObjectByID<customer>(id, newobject, Paths.CustomerPath);
+
+            return new { message = $"Item has been changed" };
+        });
+        router.AddRoute("/authCustomer", "POST", (context, parameters, requestBody) =>
+        {
+
+            JObject jsonObject = JObject.Parse(requestBody);
+            string email = jsonObject["Email"].ToString();
+            string password = jsonObject["Password"].ToString();
+
+            var customer = FileOperations.GetCustomerByEmail(email, Paths.CustomerPath);
+
+            return FileOperations.CheckCustomerPassword(customer,password);
         });
 
 

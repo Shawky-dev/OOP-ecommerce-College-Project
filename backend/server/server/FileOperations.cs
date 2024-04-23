@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using server;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -82,6 +83,41 @@ public class FileOperations
         var allObjects = GetAllObjects<T>(filePath);
         var filteredObjects = allObjects.Where(obj => obj.Name.StartsWith(search, StringComparison.OrdinalIgnoreCase)).ToList();
         return filteredObjects;
+    }
+
+    public static customer GetCustomerByEmail(string Email, string filePath) { 
+
+        var allObjects = GetAllObjects<customer>(filePath);
+        var foundObject = allObjects.FirstOrDefault(obj => obj.Email == Email);
+        return foundObject;
+    }
+    public static object CheckCustomerPassword(customer customer, string password)
+    {
+        if (customer == null)
+        {
+            return new { 
+                message = "customer with this email not Found", 
+                code= "404"
+            };
+
+        }
+        if(password == customer.Password) {
+            return new
+            {
+                message = "correct passsword & email",
+                code = "200",
+                id = customer.ID
+            };
+        }
+        else
+        {
+            return new
+            {
+                message = "incorrect passsword & email",
+                code = "404",
+            };
+        }
+
     }
 }
 

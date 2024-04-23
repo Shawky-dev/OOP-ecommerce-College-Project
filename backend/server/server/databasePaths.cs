@@ -11,11 +11,17 @@ namespace server
     {
         string serverDirectory = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"..\.."));
         string itemsPath;
+        string customerPath;
 
         public string ItemPath
         {
             get { return itemsPath; }
             set { itemsPath = Path.Combine(serverDirectory, value); }
+        }
+        public string CustomerPath
+        {
+            get { return customerPath; }
+            set { customerPath = Path.Combine(serverDirectory, value); }
         }
 
     }

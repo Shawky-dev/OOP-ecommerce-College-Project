@@ -37,15 +37,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\user\customer.cs" />
+    <Compile Include="classes\user\itemcart.cs" />
+    <Compile Include="classes\user\user.cs" />
     <Compile Include="Controller.cs" />
-    <Compile Include="customer.cs" />
     <Compile Include="databasePaths.cs" />
     <Compile Include="FileOperations.cs" />
-    <Compile Include="Item.cs" />
-    <Compile Include="Message.cs" />
+    <Compile Include="classes\Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Router.cs" />
-    <Compile Include="users.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -67,8 +67,8 @@
     <Folder Include="databaseFolder\images\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="databaseFolder\customers\customers.txt" />
     <Content Include="databaseFolder\items\items.txt" />
-    <Content Include="PATHS.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

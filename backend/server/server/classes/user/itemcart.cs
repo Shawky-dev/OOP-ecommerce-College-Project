@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace server
-{
-    public class Message
+{public class itemcart
     {
-        public string message { get; set; }
+        public int id;
+        public int quantity = 0;
+
+
     }
 }
