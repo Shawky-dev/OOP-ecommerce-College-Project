@@ -36,12 +36,5 @@ namespace server.classes.user
 
         }
         public string ProfilePictureBase64 { get; set; }
-        public virtual string welcomeMsg()
-        {
-
-
-
- 
-
     }
 }

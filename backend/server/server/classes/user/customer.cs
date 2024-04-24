@@ -67,12 +67,8 @@ namespace server
         public void clearCart()
         {
 
-            userCart = null;
+            userCart = new List<itemcart>();
 
-        }
-        public override string welcomeMsg()
-        {
-            return base.welcomeMsg() + Name;
         }
     }
 
