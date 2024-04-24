@@ -32,10 +32,11 @@ class Program
 
         Router router = new Router();
         //router ITEMS paths
-        router.AddRoute("/items", "GET", (context, requestData, requestBody) =>
+        router.AddRoute("/items", "GET", (context, parameters, requestBody) =>
         {
             return FileOperations.GetAllObjects<Item>(Paths.ItemPath);
         });
+
         router.AddRoute("/items/{id}", "GET", (context, parameters, requestBody) =>
         {
             int id = Int32.Parse(parameters["id"]);
@@ -43,6 +44,7 @@ class Program
             return FileOperations.GetObjectByID<Item>(id, Paths.ItemPath);
 
         });
+
         router.AddRoute("/items/{id}", "DELETE", (context, parameters, requestBody) =>
         {
             int id = Int32.Parse(parameters["id"]);
@@ -62,8 +64,12 @@ class Program
         });
         router.AddRoute("/newitem", "POST", (context, parameters, requestBody) =>
         {
+            var allobjects = FileOperations.GetAllObjects<Item>(Paths.ItemPath);
 
             var newobject = JsonConvert.DeserializeObject<Item>(requestBody);
+            var id = IDGenerator.GenerateUniqueID<Item>(allobjects);
+            newobject.ID = id;
+
             FileOperations.AddObjectToFile<Item>(newobject, Paths.ItemPath);
             return new { message = $"Item has been added" };
         });
@@ -72,36 +78,38 @@ class Program
         router.AddRoute("/search/{id}", "GET", (context, parameters, requestBody) =>
         {
             var id = parameters["id"];
-            if(id != "*")
+            if (id != "*")
             {
                 return FileOperations.GetAllObjectsFromSearch<Item>(id, Paths.ItemPath);
             }
             else
             {
-                
+
                 return FileOperations.GetAllObjects<Item>(Paths.ItemPath);
             }
 
         });
 
         //Router customers
-        router.AddRoute("/customers", "GET", (context, requestData, requestBody) =>
+        router.AddRoute("/customers", "GET", (context, parameters, requestBody) =>
         {
             return FileOperations.GetAllObjects<customer>(Paths.CustomerPath);
         });
         router.AddRoute("/newCustomer", "POST", (context, parameters, requestBody) =>
         {
             var newobject = JsonConvert.DeserializeObject<customer>(requestBody);
-            if(FileOperations.GetUserByEmail<customer>(newobject.Email, Paths.CustomerPath) == null)
+            if (FileOperations.GetUserByEmail<customer>(newobject._mail, Paths.CustomerPath) == null)
             {
                 var allobjects = FileOperations.GetAllObjects<customer>(Paths.CustomerPath);
                 var id = IDGenerator.GenerateUniqueID<customer>(allobjects);
                 newobject.ID = id;
                 FileOperations.AddObjectToFile<customer>(newobject, Paths.CustomerPath);
-            return new { message = $"user has been added",
-                         user = newobject,
-                         code = 200
-            };
+                return new
+                {
+                    message = $"user has been added",
+                    user = newobject,
+                    code = 200
+                };
             }
             else
             {
@@ -138,18 +146,63 @@ class Program
 
             return new { message = $"Item has been changed" };
         });
-
-
         router.AddRoute("/authCustomer", "POST", (context, parameters, requestBody) =>
         {
 
             JObject jsonObject = JObject.Parse(requestBody);
-            string email = jsonObject["Email"].ToString();
-            string password = jsonObject["Password"].ToString();
+            string email = jsonObject["_mail"].ToString();
+            string password = jsonObject["_pass"].ToString();
 
             var customer = FileOperations.GetUserByEmail<customer>(email, Paths.CustomerPath);
 
-            return FileOperations.CheckUserPassword<customer>(customer,password);
+            return FileOperations.CheckUserPassword<customer>(customer, password);
+        });
+
+
+        //Carts
+        router.AddRoute("/cart/{id}", "GET", (context, parameters, requestBody) =>
+        {
+            int id = Int32.Parse(parameters["id"]);
+            var customer = FileOperations.GetObjectByID<customer>(id, Paths.CustomerPath);
+
+            return customer.userCart;
+        });
+        router.AddRoute("/cart/{id}", "PUT", (context, parameters, requestBody) =>
+        {
+            JObject jsonObject = JObject.Parse(requestBody);
+
+                string method = jsonObject["method"].ToString();
+
+                int id = Int32.Parse(parameters["id"]);
+                var customer = FileOperations.GetObjectByID<customer>(id, Paths.CustomerPath);
+
+                int itemID = Int32.Parse(jsonObject["itemID"].ToString());
+                var item = FileOperations.GetObjectByID<Item>(1, Paths.ItemPath);
+
+            if (method == "add")
+            {
+                customer.addItem(item);
+                FileOperations.ChangeObjectByID<customer>(id, customer, Paths.CustomerPath);
+
+                return new
+                {
+                    message = "added item",
+                    item = item
+                };
+            }
+            else if (method == "remove") {
+                customer.removeItem(item);
+                FileOperations.ChangeObjectByID<customer>(id, customer, Paths.CustomerPath);
+                return new
+                {
+                    message = "removed item",
+                    item = item
+                };
+            }
+            return new
+            {
+                message = "err"
+            };
         });
 
         //AdminRoutes__________
@@ -161,7 +214,7 @@ class Program
         router.AddRoute("/newAdmin", "POST", (context, parameters, requestBody) =>
         {
             var newobject = JsonConvert.DeserializeObject<admin>(requestBody);
-            if (FileOperations.GetUserByEmail<admin>(newobject.Email, Paths.AdminPath) == null)
+            if (FileOperations.GetUserByEmail<admin>(newobject._mail, Paths.AdminPath) == null)
             {
                 var allobjects = FileOperations.GetAllObjects<admin>(Paths.AdminPath);
                 var id = IDGenerator.GenerateUniqueID<admin>(allobjects);
@@ -215,8 +268,8 @@ class Program
         {
 
             JObject jsonObject = JObject.Parse(requestBody);
-            string email = jsonObject["Email"].ToString();
-            string password = jsonObject["Password"].ToString();
+            string email = jsonObject["_mail"].ToString();
+            string password = jsonObject["_pass"].ToString();
 
             var admin = FileOperations.GetUserByEmail<admin>(email, Paths.AdminPath);
 
@@ -241,7 +294,7 @@ class Program
 
             // Add CORS headers to allow cross-origin requests
             response.AddHeader("Access-Control-Allow-Origin", "*"); // Allow any origin
-            response.AddHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS"); // Allow specific methods
+            response.AddHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS,PUT,DELETE"); // Allow specific methods
             response.AddHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
 
             System.IO.Stream output = response.OutputStream;

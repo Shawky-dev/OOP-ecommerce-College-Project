@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace server
 {public class itemcart
     {
-        public int id;
+        public Item item {  get; set; }
         public int quantity = 0;
 
 

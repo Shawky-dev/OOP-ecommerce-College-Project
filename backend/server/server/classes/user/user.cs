@@ -9,11 +9,41 @@ namespace server.classes.user
 {
     public class user
     {
-        public string Password {  get; set; }
-        public string Email {  get; set; }
-        public string ProfilePictureBase64 {  get; set; }
+        private string Password;
+        private string Email;
+        public string _pass
+        {
+            get
+            {
+                return Password;
+            }
+            set
+            {
+                Password = value;
+            }
 
- 
+        }
+        public string _mail
+        {
+            get
+            {
+                return Email;
+            }
+            set
+            {
+                Email = value;
+            }
+
+        }
+        public string ProfilePictureBase64 { get; set; }
+        public virtual string welcomeMsg()
+        {
+
+
+
+            return "Welcome! ";
+        }
+
 
     }
 }

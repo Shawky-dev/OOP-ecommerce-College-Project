@@ -1,6 +1,7 @@
-/* eslint-disable react/prop-types */
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useNavigate } from 'react-router-dom';
+
 
 const priceTagStyle = {
     display: 'inline-block',
@@ -19,10 +20,33 @@ const priceTagStyle = {
 }
 
 function ItemCard(props) {
+    const navigate = useNavigate();
+
+    const getUserRole = () => {
+        return localStorage.getItem('role');
+    };
+
+    const deleteItem = async (id) => {
+        console.log(id);
+        try {
+            const response = await fetch(`http://localhost:8080/items/${id}`, {
+                method: 'DELETE',
+            });
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            console.log('Item deleted successfully');
+            props.onDelete(); // Call the onDelete function passed down from the App component
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+        }
+    };
+
+
     return (
         <>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={`data:image/jpeg;base64,${props.ImageBase64}`} width={"200px"} height={"230px"} />
+            <Card style={{ width: '12rem'}}>
+                <Card.Img variant="top" src={props.ImageBase64} width={"100px"} height={"140px"} />
                 <Card.Body>
                     <div style={{ display: "flex", justifyContent: "space-between" }}>
                         <div>
@@ -34,7 +58,21 @@ function ItemCard(props) {
                     <Card.Text>
                         {props.text}
                     </Card.Text>
-                    <Button variant="primary">add to Cart</Button>
+                    <div justify-content={ "space-between"}  >
+                    
+                        
+                    
+                    {getUserRole() === 'admin' ? (
+                       <>
+                        <Button size="sm" variant='danger' onClick={() => deleteItem(props.ID)}>Delete Item</Button>
+                        <Button size="sm" variant='warning' onClick={() => navigate(`/edititem/${props.ID}`)}>Edit Item</Button>
+                       </>
+                    ) : (
+                        
+                        <Button size="sm" variant="primary">add to Cart</Button>
+                    )}
+                    </div>
+
                 </Card.Body>
             </Card>
         </>

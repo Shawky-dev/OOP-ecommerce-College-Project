@@ -24,8 +24,8 @@ function Login() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        Password: password,
-        Email: email,
+        _pass: password,
+        _mail: email,
       }),
     });
 

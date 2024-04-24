@@ -4,14 +4,12 @@ import { ListGroup } from 'react-bootstrap';
 const Sidebar = () => {
   return (
     <ListGroup>
-      <ListGroup.Item action href="#link1">Link 1</ListGroup.Item>
-      <ListGroup.Item action href="#link2">Link 2</ListGroup.Item>
-      <ListGroup.Item action href="#link3">Link 3</ListGroup.Item>
-      <ListGroup.Item action href="#link3">Link 4</ListGroup.Item>
-      <ListGroup.Item action href="#link3">Link 5</ListGroup.Item>
-      <ListGroup.Item action href="#link3">Link 6</ListGroup.Item>
-      <ListGroup.Item action href="#link3">Link 7</ListGroup.Item>
-      <ListGroup.Item action href="#link3">Link 8</ListGroup.Item>
+      <ListGroup.Item action href="#link1">Food</ListGroup.Item>
+      <ListGroup.Item action href="#link2">Electronics</ListGroup.Item>
+      <ListGroup.Item action href="#link3">Books</ListGroup.Item>
+      <ListGroup.Item action href="#link4">Clothing</ListGroup.Item>
+      <ListGroup.Item action href="#link5">Furniture</ListGroup.Item>
+      <ListGroup.Item action href="#link6">Toys</ListGroup.Item>
     </ListGroup>
   );
 }

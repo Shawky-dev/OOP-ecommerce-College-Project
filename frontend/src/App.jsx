@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import BrowsingPage from './pages/Browsing/Browsing.jsx';
-import AAhmed from './AAhmed.jsx';
 import Login from './pages/Login/Login.jsx';
-import Admin from './pages/Admin/Admin.jsx';
+import Settings from './pages/Settings/Settings.jsx';
+import { AddItem } from './pages/Item/AddItem.jsx';
+import EditItem from './pages/Item/EditItem.jsx';
+import Cart  from './pages/Cart/Cart.jsx';
 
 function App() {
  return (
@@ -12,8 +14,11 @@ function App() {
         <Routes>
           <Route path="/" element={<BrowsingPage />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/admin" element={<Admin />} />
-
+          <Route path="/settings" element={ <Settings/>} />
+          <Route path='/additem' element={<AddItem/>}/>
+          <Route path='/edititem/:id' element={<EditItem/>}/>
+          <Route path='cart' element={<Cart/>}/>
+          
         </Routes>
       </Router>
     </div>

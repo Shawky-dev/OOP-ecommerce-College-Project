@@ -30,11 +30,11 @@ const AdminNav = ({id}) => {
     <Nav className="ml-auto" style={{ marginRight: '20px' }}>
       {items && (
         <NavDropdown title={items.Name} id="basic-nav-dropdown" drop="down-centered">
-          <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
+          <NavDropdown.Item onClick={()=> navigate('/settings')}>Settings</NavDropdown.Item>
           <NavDropdown.Item onClick={handleLogout}>LogOut</NavDropdown.Item> {/* Updated to use onClick */}
         </NavDropdown>
       )}
-      <Button variant="outline-success" className="ml-auto" style={{ marginRight: '20px' }}>AddItem</Button>
+      <Button onClick={() => navigate("/additem")} variant="outline-success" className="ml-auto" style={{ marginRight: '20px' }}>AddItem</Button>
     </Nav>
  )
 }

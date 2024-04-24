@@ -14,7 +14,7 @@ namespace server
         public string Name {  get; set; }
         public int ID {  get; set; }
         public string Address {  get; set; }
-        public List<itemcart> userCart;
+        public List<itemcart> userCart = new List<itemcart>();
 
 
 
@@ -24,7 +24,7 @@ namespace server
             {
                 itemcart userItem = new itemcart()
                 {
-                    id = it.ID,
+                    item = it,
                     quantity = 1
 
                 };
@@ -35,7 +35,7 @@ namespace server
                 for (int i = 0; i < userCart.Count; i++)
                 {
 
-                    if (it.ID == userCart[i].id)
+                    if (it.ID == userCart[i].item.ID)
                     {
                         userCart[i].quantity++;
                     }
@@ -45,7 +45,7 @@ namespace server
             }
 
         }
-        public void RemQuan(Item it)
+        public void removeItem(Item it)
 
         {
 
@@ -54,7 +54,7 @@ namespace server
             for (int i = 0; i < userCart.Count; i++)
             {
 
-                if (it.ID == userCart[i].id)
+                if (it.ID == userCart[i].item.ID)
                 {
                     userCart[i].quantity--;
                     if (userCart[i].quantity == 0) userCart.RemoveAt(i);

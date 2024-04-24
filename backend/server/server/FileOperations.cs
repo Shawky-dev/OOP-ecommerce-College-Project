@@ -90,7 +90,7 @@ public class FileOperations
     { 
 
         var allObjects = GetAllObjects<T>(filePath);
-        var foundObject = allObjects.FirstOrDefault(obj => obj.Email == Email);
+        var foundObject = allObjects.FirstOrDefault(obj => obj._mail == Email);
         return foundObject;
     }
     public static object CheckUserPassword<T>(T customer, string password) where T:class,IAccountable,IIdentifiable
@@ -103,7 +103,7 @@ public class FileOperations
             };
 
         }
-        if(password == customer.Password) {
+        if(password == customer._pass) {
             return new
             {
                 message = "correct passsword & email",
@@ -134,6 +134,6 @@ public interface INameable
 }
 public interface IAccountable
 {
-    string Email { get; set; }
-    string Password { get; set; }
+    string _mail { get; set; }
+    string _pass { get; set; }
 }
