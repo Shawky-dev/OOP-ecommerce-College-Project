@@ -41,9 +41,7 @@ namespace server.classes.user
 
 
 
-            return "Welcome! ";
-        }
-
+ 
 
     }
 }
