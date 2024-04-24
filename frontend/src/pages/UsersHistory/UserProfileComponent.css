@@ -1,0 +1,43 @@
+.user-profile {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #98a5aaee;
+   }
+   
+   .user-profile h2 {
+    margin-bottom: 20px;
+    color: #333;
+   }
+   
+   .user-profile h3 {
+    margin-top: 20px;
+    color: #333;
+   }
+   
+   .user-profile .table {
+    margin-top: 20px;
+    border-radius: 10px; /* Add rounded corners to the table */
+   }
+   
+   .user-profile .table thead {
+    background-color: #007bff; /* Custom color for table headers */
+    color: #fff; /* White text for headers */
+   }
+   
+   .user-profile .table tbody tr:nth-child(even) {
+    background-color: #5d7083; /* Light background for even rows */
+   }
+   
+   .user-profile .table tbody tr:hover {
+    background-color: #e9ecef; /* Slightly darker background for hovered rows */
+   }
+   
+   .user-profile .profile-picture {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+   }
+   

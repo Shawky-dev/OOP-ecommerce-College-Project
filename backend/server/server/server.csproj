@@ -37,8 +37,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\itemChart.cs" />
     <Compile Include="classes\user\admin.cs" />
     <Compile Include="classes\user\customer.cs" />
+    <Compile Include="classes\user\purchase.cs" />
     <Compile Include="classes\user\itemcart.cs" />
     <Compile Include="classes\user\user.cs" />
     <Compile Include="Controller.cs" />

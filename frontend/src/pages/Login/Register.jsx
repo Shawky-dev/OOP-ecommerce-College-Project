@@ -17,8 +17,8 @@ const Register = () => {
     // Construct the request body based on the role
     let requestBody = {
       Name: username,
-      Password: password,
-      Email: email,
+      _pass: password,
+      _mail: email,
     };
 
     // Include the address in the request body only for customers

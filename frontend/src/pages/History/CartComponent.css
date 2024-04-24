@@ -1,0 +1,37 @@
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff; /* Darker text for the title */
+   }
+   
+   .table-container {
+    margin-top: 20px;
+    background-color: #dbf8ff52; /* Ensure the container has a white background */
+    padding: 20px; /* Add padding around the table */
+    border-radius: 10px; /* Round the corners of the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the container */
+   }
+   
+   .table {
+    border-radius: 10px; /* Round the corners of the table */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the table */
+    width: 100%; /* Ensure the table takes the full width of its container */
+   }
+   
+   .table thead {
+    background-color: #f8f9fa;
+   }
+   
+   .table thead th {
+    border-top: none;
+    color: #6c757d; /* Darker text for the table headers */
+   }
+   
+   .table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+   }
+   
+   .table tbody tr:hover {
+    background-color: #e9ecef; /* Lighten the background color of rows on hover */
+   }
+   

@@ -15,6 +15,7 @@ const CustomerNav = () => {
   
     <NavDropdown title="Account" id="basic-nav-dropdown" >
     <NavDropdown.Item onClick={()=> navigate('/settings')}>Settings</NavDropdown.Item>
+          <NavDropdown.Item onClick={() =>navigate("/history")}>History </NavDropdown.Item> 
           <NavDropdown.Item onClick={handleLogout}>LogOut</NavDropdown.Item> 
     </NavDropdown>
     <Nav.Link onClick={() => navigate("/cart")}>

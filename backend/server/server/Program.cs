@@ -90,6 +90,8 @@ class Program
 
         });
 
+
+
         //Router customers
         router.AddRoute("/customers", "GET", (context, parameters, requestBody) =>
         {
@@ -167,46 +169,59 @@ class Program
 
             return customer.userCart;
         });
+
+
         router.AddRoute("/cart/{id}", "PUT", (context, parameters, requestBody) =>
         {
             JObject jsonObject = JObject.Parse(requestBody);
 
-                string method = jsonObject["method"].ToString();
+            string method = jsonObject["method"].ToString();
+            int itemid = Int32.Parse(parameters["id"]);
+            int userID = Int32.Parse(jsonObject["userID"].ToString());
 
-                int id = Int32.Parse(parameters["id"]);
-                var customer = FileOperations.GetObjectByID<customer>(id, Paths.CustomerPath);
+            var customer = FileOperations.GetObjectByID<customer>(userID, Paths.CustomerPath);
 
-                int itemID = Int32.Parse(jsonObject["itemID"].ToString());
-                var item = FileOperations.GetObjectByID<Item>(1, Paths.ItemPath);
-
-            if (method == "add")
+            var item = FileOperations.GetObjectByID<Item>(itemid, Paths.ItemPath);
+            if (customer != null)
             {
-                customer.addItem(item);
-                FileOperations.ChangeObjectByID<customer>(id, customer, Paths.CustomerPath);
 
-                return new
+                if (method == "add")
                 {
-                    message = "added item",
-                    item = item
-                };
-            }
-            else if (method == "remove") {
-                customer.removeItem(item);
-                FileOperations.ChangeObjectByID<customer>(id, customer, Paths.CustomerPath);
-                return new
+                    customer.addItem(item);
+                    FileOperations.ChangeObjectByID<customer>(userID, customer, Paths.CustomerPath);
+
+                    return new
+                    {
+                        message = "added item"
+                    };
+                }
+                else if (method == "remove")
                 {
-                    message = "removed item",
-                    item = item
-                };
+                    customer.removeItem(item);
+                    FileOperations.ChangeObjectByID<customer>(userID, customer, Paths.CustomerPath);
+                    return new
+                    {
+                        message = "removed item"
+                    };
+                }
             }
+
             return new
             {
                 message = "err"
             };
         });
+        router.AddRoute("/cartCheckout/{id}", "POST", (context, parameters, requestBody) =>
+        {
+            int id = Int32.Parse(parameters["id"]);
+            var customer = FileOperations.GetObjectByID<customer>(id, Paths.CustomerPath);
+            customer.AddHistroy();
+            FileOperations.ChangeObjectByID<customer>(id,customer, Paths.CustomerPath);
+            return customer.userHistory;
+        });
 
         //AdminRoutes__________
-        router.AddRoute("/admins", "GET", (context, requestData, requestBody) =>
+        router.AddRoute("/admins", "GET", (context, parameters, requestBody) =>
         {
             return FileOperations.GetAllObjects<admin>(Paths.AdminPath);
         });

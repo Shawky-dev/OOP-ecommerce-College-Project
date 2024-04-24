@@ -29,8 +29,7 @@ namespace server
             Console.WriteLine("-----New Method----");
             Console.WriteLine($"Request URL: {context.Request.Url}");
             Console.WriteLine($"Request Method: {context.Request.HttpMethod}");
-            Console.WriteLine($"--Header-- \n {context.Request.Headers}");
-            Console.WriteLine($"------------");
+
         }
 
         public string ProcessRequest(HttpListenerContext context)
@@ -43,6 +42,8 @@ namespace server
 
             // Always read the request body, regardless of the method
             requestBody = new StreamReader(context.Request.InputStream).ReadToEnd();
+            Console.WriteLine($"Request Body: \n {requestBody}");
+            Console.WriteLine($"------------");
 
             var requestSegments = path.Split('/').Where(s => !string.IsNullOrEmpty(s)).ToList();
             foreach (var route in routes)

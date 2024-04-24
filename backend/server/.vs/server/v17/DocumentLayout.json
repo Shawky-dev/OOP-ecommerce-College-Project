@@ -3,44 +3,48 @@
   "WorkspaceRootPath": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\router.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\router.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\itemcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\classes\\user\\itemcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databasefolder\\customers\\customers.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\databasefolder\\customers\\customers.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databasefolder\\items\\items.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\databasefolder\\items\\items.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\databasefolder\\items\\items.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\classes\\user\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\classes\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\classes\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\classes\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databasefolder\\admins\\admins.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\databasefolder\\admins\\admins.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\databasefolder\\customers\\customers.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\databasefolder\\customers\\customers.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\classes\\itemchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\classes\\itemchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\classes\\user\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\classes\\user\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\classes\\user\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\classes\\user\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\classes\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\classes\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\classes\\user\\itemcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\classes\\user\\itemcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|e:\\gam3a2\\oop\\oop_ecom\\backend\\server\\server\\classes\\user\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB0C00F-5471-42D2-8F2A-0052AEAC9082}|server\\server.csproj|solutionrelative:server\\classes\\user\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,8 +54,99 @@
       "DocumentGroups": [
         {
           "DockedWidth": 886,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "items.txt",
+              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\items\\items.txt",
+              "RelativeDocumentMoniker": "server\\databaseFolder\\items\\items.txt",
+              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\items\\items.txt",
+              "RelativeToolTip": "server\\databaseFolder\\items\\items.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-04-24T22:11:36.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Item.cs",
+              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\Item.cs",
+              "RelativeDocumentMoniker": "server\\classes\\Item.cs",
+              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\Item.cs",
+              "RelativeToolTip": "server\\classes\\Item.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAkwBQAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T22:07:12.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FileOperations.cs",
+              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\FileOperations.cs",
+              "RelativeDocumentMoniker": "server\\FileOperations.cs",
+              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\FileOperations.cs",
+              "RelativeToolTip": "server\\FileOperations.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAowFgAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T22:04:43.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "itemChart.cs",
+              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\itemChart.cs",
+              "RelativeDocumentMoniker": "server\\classes\\itemChart.cs",
+              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\itemChart.cs",
+              "RelativeToolTip": "server\\classes\\itemChart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T21:16:31.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "admin.cs",
+              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\admin.cs",
+              "RelativeDocumentMoniker": "server\\classes\\user\\admin.cs",
+              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\admin.cs",
+              "RelativeToolTip": "server\\classes\\user\\admin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T21:01:52.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "user.cs",
+              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\user.cs",
+              "RelativeDocumentMoniker": "server\\classes\\user\\user.cs",
+              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\user.cs",
+              "RelativeToolTip": "server\\classes\\user\\user.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAzwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T20:59:53.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "itemcart.cs",
+              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\itemcart.cs",
+              "RelativeDocumentMoniker": "server\\classes\\user\\itemcart.cs",
+              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\itemcart.cs",
+              "RelativeToolTip": "server\\classes\\user\\itemcart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T20:53:12.424Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -61,70 +156,6 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "itemcart.cs",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\itemcart.cs",
-              "RelativeDocumentMoniker": "server\\classes\\user\\itemcart.cs",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\itemcart.cs",
-              "RelativeToolTip": "server\\classes\\user\\itemcart.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T00:24:46.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "user.cs",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\user.cs",
-              "RelativeDocumentMoniker": "server\\classes\\user\\user.cs",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\user.cs",
-              "RelativeToolTip": "server\\classes\\user\\user.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T00:23:14.924Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "items.txt",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\items\\items.txt",
-              "RelativeDocumentMoniker": "server\\databaseFolder\\items\\items.txt",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\items\\items.txt",
-              "RelativeToolTip": "server\\databaseFolder\\items\\items.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-04-23T22:55:37.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Router.cs",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\Router.cs",
-              "RelativeDocumentMoniker": "server\\Router.cs",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\Router.cs",
-              "RelativeToolTip": "server\\Router.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAgwEEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T19:44:38.935Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FileOperations.cs",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\FileOperations.cs",
-              "RelativeDocumentMoniker": "server\\FileOperations.cs",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\FileOperations.cs",
-              "RelativeToolTip": "server\\FileOperations.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAcwHUAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T19:08:20.534Z"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "customers.txt",
@@ -132,58 +163,49 @@
               "RelativeDocumentMoniker": "server\\databaseFolder\\customers\\customers.txt",
               "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\customers\\customers.txt",
               "RelativeToolTip": "server\\databaseFolder\\customers\\customers.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABPAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAuwDEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-04-23T18:46:14.505Z"
+              "WhenOpened": "2024-04-24T20:39:34.192Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "customer.cs",
               "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\customer.cs",
               "RelativeDocumentMoniker": "server\\classes\\user\\customer.cs",
               "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\customer.cs",
               "RelativeToolTip": "server\\classes\\user\\customer.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBAAAAA+AAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwCcAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T18:46:05.843Z"
+              "WhenOpened": "2024-04-24T20:38:15.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\Program.cs",
               "RelativeDocumentMoniker": "server\\Program.cs",
               "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\Program.cs",
               "RelativeToolTip": "server\\Program.cs",
-              "ViewState": "AQIAALEAAAAAAAAAAAAAwLoAAAAaAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAcwEMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T18:41:37.539Z",
+              "WhenOpened": "2024-04-24T13:24:07.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Item.cs",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\Item.cs",
-              "RelativeDocumentMoniker": "server\\classes\\Item.cs",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\Item.cs",
-              "RelativeToolTip": "server\\classes\\Item.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAuwBAAAAAoAAAA",
+              "DocumentIndex": 10,
+              "Title": "purchase.cs",
+              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\purchase.cs",
+              "RelativeDocumentMoniker": "server\\classes\\user\\purchase.cs",
+              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\classes\\user\\purchase.cs",
+              "RelativeToolTip": "server\\classes\\user\\purchase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T19:11:26.364Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "admins.txt",
-              "DocumentMoniker": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\admins\\admins.txt",
-              "RelativeDocumentMoniker": "server\\databaseFolder\\admins\\admins.txt",
-              "ToolTip": "E:\\gam3a2\\OOP\\OOP_Ecom\\backend\\server\\server\\databaseFolder\\admins\\admins.txt",
-              "RelativeToolTip": "server\\databaseFolder\\admins\\admins.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-04-23T16:24:12.944Z"
+              "WhenOpened": "2024-04-24T20:53:03.467Z",
+              "EditorCaption": ""
             }
           ]
         }

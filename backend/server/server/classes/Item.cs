@@ -11,7 +11,7 @@ using static Program;
 
 namespace server
 {
-    public class Item : IIdentifiable, INameable
+    public class Item : IIdentifiable, INameable,ICategoryable
     {
         public int ID { get; set; }
         public string Name { get; set; }

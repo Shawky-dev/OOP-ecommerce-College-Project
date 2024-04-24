@@ -31,6 +31,7 @@ const AdminNav = ({id}) => {
       {items && (
         <NavDropdown title={items.Name} id="basic-nav-dropdown" drop="down-centered">
           <NavDropdown.Item onClick={()=> navigate('/settings')}>Settings</NavDropdown.Item>
+          <NavDropdown.Item onClick={()=> navigate('/usershistory')}>User Activites</NavDropdown.Item>
           <NavDropdown.Item onClick={handleLogout}>LogOut</NavDropdown.Item> {/* Updated to use onClick */}
         </NavDropdown>
       )}

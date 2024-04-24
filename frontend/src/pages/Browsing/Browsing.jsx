@@ -27,9 +27,7 @@ useEffect(() => {
       <Header onSearchUpdate={handleSearchUpdate}/>
       <Container fluid>
         <Row>
-          <Col xs={2} id="sidebar-wrapper" style={{ marginTop: "40px" }}>
-            <LeftSidebar />
-          </Col>
+          
           <Col xs={10} id="page-content-wrapper" style={{ marginTop: "40px" }}>
             <MainContent items={items} onDelete={handleDelete} /> {/* Pass down the handleDelete function */}
           </Col>

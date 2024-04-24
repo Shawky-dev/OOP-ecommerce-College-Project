@@ -3,6 +3,7 @@ using server;
 using server.classes.user;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 
@@ -85,6 +86,13 @@ public class FileOperations
         var filteredObjects = allObjects.Where(obj => obj.Name.StartsWith(search, StringComparison.OrdinalIgnoreCase)).ToList();
         return filteredObjects;
     }
+    public static List<T> GetAllObjectsFromCategory<T>(string category, string filePath) where T : class, IIdentifiable, ICategoryable
+    {
+        var allObjects = GetAllObjects<T>(filePath);
+        var filteredObjects = allObjects.Where(obj => obj.Category == category).ToList();
+        return filteredObjects;
+    }
+
 
     public static T GetUserByEmail<T>(string Email, string filePath) where T : class,IAccountable
     { 
@@ -136,4 +144,8 @@ public interface IAccountable
 {
     string _mail { get; set; }
     string _pass { get; set; }
+}
+public interface ICategoryable
+{
+    string Category { get; set; }
 }

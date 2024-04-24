@@ -20,8 +20,12 @@ const priceTagStyle = {
 }
 
 function ItemCard(props) {
+
     const navigate = useNavigate();
 
+    const getUserID = () => {
+        return localStorage.getItem('id');
+    };
     const getUserRole = () => {
         return localStorage.getItem('role');
     };
@@ -31,6 +35,7 @@ function ItemCard(props) {
         try {
             const response = await fetch(`http://localhost:8080/items/${id}`, {
                 method: 'DELETE',
+
             });
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -41,7 +46,28 @@ function ItemCard(props) {
             console.error('There was a problem with the fetch operation:', error);
         }
     };
+    const addItemToCart = async (id) =>{
+        try {
+            const response = await fetch(`http://localhost:8080/cart/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    userID : getUserID(),
+                    method :"add"
+                  }),
+            });
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            console.log(`Item ${id} added to cart successfully`);
+            props.onDelete(); // Call the onDelete function passed down from the App component
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+        }
 
+    }
 
     return (
         <>
@@ -51,7 +77,7 @@ function ItemCard(props) {
                     <div style={{ display: "flex", justifyContent: "space-between" }}>
                         <div>
                             <Card.Title>{props.title}</Card.Title>
-                            <Card.Title style={{ fontSize: "14px", opacity: "50%" }}>{props.SellerName}</Card.Title>
+                            <Card.Title style={{ fontSize: "14px", opacity: "50%" }}>{props.Category}</Card.Title>
                         </div>
                         <Card.Title style={priceTagStyle}>{props.Price}</Card.Title>
                     </div>
@@ -69,7 +95,7 @@ function ItemCard(props) {
                        </>
                     ) : (
                         
-                        <Button size="sm" variant="primary">add to Cart</Button>
+                        <Button size="sm" variant="primary" onClick={() =>addItemToCart(props.ID)}>add to Cart</Button>
                     )}
                     </div>
 
