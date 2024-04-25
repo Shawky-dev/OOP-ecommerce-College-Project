@@ -1,47 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Table, Row, Col } from 'react-bootstrap';
 import './CartComponent.css';
-const data = [
-    {
-       "userCart": [
-         {
-           "quantity": 2,
-           "ID": 1,
-           "price": 123,
-           "name": "apple"
-         },
-         {
-           "quantity": 1,
-           "ID": 2,
-           "price": 312,
-           "name": "banana"
-         }
-       ],
-       "TotalPrice": 558,
-       "Address": "address",
-       "Date": "04/24/2024 11:03 PM"
-    },
-    {
-       "userCart": [
-         {
-           "quantity": 2,
-           "ID": 2,
-           "price": 312,
-           "name": "banana"
-         },
-         {
-           "quantity": 2,
-           "ID": 1,
-           "price": 123,
-           "name": "apple"
-         }
-       ],
-       "TotalPrice": 870,
-       "Address": "address",
-       "Date": "04/24/2024 11:04 PM"
-    }
-   ];
 const CartComponent = () => {
+
+  const [data, setData] = useState([]);
+  const getUserID = () => {
+    return localStorage.getItem('id');
+};
+ useEffect(() => {
+    fetch('http://localhost:8080/customers/'+getUserID())
+      .then(response => response.json())
+      .then(data => {setData(data.userHistory)
+        console.log(data)
+      })
+      .catch(error => console.error('Error fetching data:', error));
+ }, []);
  return (
     <Container>
     <Row className="justify-content-center">

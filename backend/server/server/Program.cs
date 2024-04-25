@@ -156,8 +156,15 @@ class Program
         router.AddRoute("/customers/{id}", "PUT", (context, parameters, requestBody) =>
         {
             int id = Int32.Parse(parameters["id"]);
-
             var newobject = JsonConvert.DeserializeObject<customer>(requestBody);
+            var oldobject = FileOperations.GetObjectByID<customer>(id, Paths.CustomerPath);
+            oldobject.Name = newobject.Name;
+            oldobject.Address = newobject.Address;
+            oldobject._mail = newobject._mail;
+            oldobject._pass = newobject._pass;
+            oldobject.ProfilePictureBase64 = newobject.ProfilePictureBase64;
+
+
             FileOperations.ChangeObjectByID<customer>(id, newobject, Paths.CustomerPath);
 
             return new { message = $"Item has been changed" };

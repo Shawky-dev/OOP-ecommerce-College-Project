@@ -1,8 +1,23 @@
-import React from 'react';
+import { useEffect, useState } from "react";
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
+
 import { useNavigate } from 'react-router-dom';
-const CustomerNav = () => {
+const CustomerNav = ({id}) => {
  const navigate = useNavigate(); // Use the useNavigate hook
+ const [data, setData] = useState({});
+
+ useEffect(() => {
+  fetch('http://localhost:8080/customers/'+id)
+    .then(response => response.json())
+    .then(data => {setData(data)
+      console.log(data)
+    })
+    .catch(error => console.error('Error fetching data:', error));
+}, []);
 
   const handleLogout = () => {
     // Clear local storage
@@ -12,8 +27,8 @@ const CustomerNav = () => {
  };
   return (
     <Nav className="ml-auto" style={{ marginRight: '20px' }}>
-  
-    <NavDropdown title="Account" id="basic-nav-dropdown" >
+  <Image src={data.ProfilePictureBase64} roundedCircle width={"50px"}/>
+    <NavDropdown title={data.Name} id="basic-nav-dropdown" >
     <NavDropdown.Item onClick={()=> navigate('/settings')}>Settings</NavDropdown.Item>
           <NavDropdown.Item onClick={() =>navigate("/history")}>History </NavDropdown.Item> 
           <NavDropdown.Item onClick={handleLogout}>LogOut</NavDropdown.Item> 

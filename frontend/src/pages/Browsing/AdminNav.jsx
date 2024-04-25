@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const AdminNav = ({id}) => {
@@ -29,11 +30,14 @@ const AdminNav = ({id}) => {
  return (
     <Nav className="ml-auto" style={{ marginRight: '20px' }}>
       {items && (
+        <>
+          <Image src={items.ProfilePictureBase64} roundedCircle width={"50px"}/>
         <NavDropdown title={items.Name} id="basic-nav-dropdown" drop="down-centered">
           <NavDropdown.Item onClick={()=> navigate('/settings')}>Settings</NavDropdown.Item>
           <NavDropdown.Item onClick={()=> navigate('/usershistory')}>User Activites</NavDropdown.Item>
           <NavDropdown.Item onClick={handleLogout}>LogOut</NavDropdown.Item> {/* Updated to use onClick */}
         </NavDropdown>
+        </>
       )}
       <Button onClick={() => navigate("/additem")} variant="outline-success" className="ml-auto" style={{ marginRight: '20px' }}>AddItem</Button>
     </Nav>
