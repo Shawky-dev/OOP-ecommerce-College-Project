@@ -1,20 +1,20 @@
-import React from 'react';
+import { useEffect, useState } from "react";
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import CustomerNav from './CustomerNav';
 import AdminNav from './AdminNav'; // Assuming you have an AdminNav component
 import { useNavigate } from 'react-router-dom';
 
 function MyNavbar({ onSearchUpdate }) {
-    const [searchValue, setSearchValue] = React.useState('');
+    const [searchValue, setSearchValue] = useState('');
     const navigate = useNavigate();
     
     const handleSearch = (event) => {
         event.preventDefault();
         if(searchValue){
-            onSearchUpdate(searchValue);
-            console.log(searchValue);
+            onSearchUpdate(searchValue,"search");
+            console.log(searchValue,"search");
         } else {
-            onSearchUpdate("*");
+            onSearchUpdate("*","search");
         }
     };
 

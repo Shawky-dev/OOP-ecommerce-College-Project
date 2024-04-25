@@ -75,9 +75,13 @@ class Program
         });
 
 
-        router.AddRoute("/search/{id}", "GET", (context, parameters, requestBody) =>
+        router.AddRoute("/search/{id}", "POST", (context, parameters, requestBody) =>
         {
             var id = parameters["id"];
+            JObject jsonObject = JObject.Parse(requestBody);
+            string method = jsonObject["method"].ToString();
+
+            if(method == "search")
             if (id != "*")
             {
                 return FileOperations.GetAllObjectsFromSearch<Item>(id, Paths.ItemPath);
@@ -86,8 +90,18 @@ class Program
             {
 
                 return FileOperations.GetAllObjects<Item>(Paths.ItemPath);
+            }else if(method == "category")
+            {
+                if (id != "*")
+                {
+                    return FileOperations.GetAllObjectsFromCategory<Item>(id, Paths.ItemPath);
+                }
+                else
+                {
+                    return FileOperations.GetAllObjects<Item>(Paths.ItemPath);
+                }
             }
-
+            return new { message =id };
         });
 
 

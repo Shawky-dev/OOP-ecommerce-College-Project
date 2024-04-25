@@ -3,8 +3,24 @@
     "ID": 1,
     "Name": "Apple",
     "Description": "312312",
-    "Category": "",
-    "Price": 13.0,
+    "Category": "Food",
+    "Price": 14.0,
+    "ImageBase64": null
+  },
+  {
+    "ID": 2,
+    "Name": "bannana",
+    "Description": "",
+    "Category": "Books",
+    "Price": 123.0,
+    "ImageBase64": null
+  },
+  {
+    "ID": 3,
+    "Name": "orange",
+    "Description": "",
+    "Category": "Furniture",
+    "Price": 23.0,
     "ImageBase64": null
   }
 ]

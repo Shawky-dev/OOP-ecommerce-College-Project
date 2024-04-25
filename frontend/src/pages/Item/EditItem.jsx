@@ -80,7 +80,7 @@ const EditItem = () => {
 
         <Form.Group controlId="formBasicCategory">
           <Form.Label>Category</Form.Label>
-          <FormControl as="select" value={item.category} onChange={(e) => setCategory(e.target.value)}>
+          <FormControl as="select" value={item.Category} name= "Category" onChange={handleChange}>
             <option value="Food">Food</option>
             <option value="Electronics">Electronics</option>
             <option value="Books">Books</option>

@@ -1,19 +1,6 @@
 [
   {
-    "userCart": [
-      {
-        "quantity": 2,
-        "ID": 2,
-        "price": 312,
-        "name": "bannana"
-      },
-      {
-        "quantity": 1,
-        "ID": 1,
-        "price": 123,
-        "name": "apple"
-      }
-    ],
+    "userCart": [],
     "userHistory": [
       {
         "userCart": [
