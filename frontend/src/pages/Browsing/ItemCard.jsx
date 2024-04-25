@@ -71,9 +71,9 @@ function ItemCard(props) {
 
     return (
         <>
-            <Card style={{ width: '12rem'}}>
-                <Card.Img variant="top" src={props.ImageBase64} width={"100px"} height={"140px"} />
-                <Card.Body>
+            <Card style={{ width: '14rem', height:"28rem", marginBottom:"40px", backgroundColor:'#FFF7FC', display: 'flex', flexDirection: 'column' }}>
+                <Card.Img variant="top" src={props.ImageBase64} width={"100px"} height={"200px"} />
+                <Card.Body style={{ flex: '1 0 auto' }}>
                     <div style={{ display: "flex", justifyContent: "space-between" }}>
                         <div>
                             <Card.Title>{props.title}</Card.Title>
@@ -84,12 +84,10 @@ function ItemCard(props) {
                     <Card.Text>
                         {props.text}
                     </Card.Text>
-                    <div justify-content={ "space-between"}  >
-                    
-                        
-                    
+                </Card.Body>
+                <div style={{ marginBottom: '10px', marginLeft: '10px', marginRight: '10px' }}>
                     {getUserRole() === 'admin' ? (
-                       <>
+                        <>
                         <Button size="sm" variant='danger' onClick={() => deleteItem(props.ID)}>Delete Item</Button>
                         <Button size="sm" variant='warning' onClick={() => navigate(`/edititem/${props.ID}`)}>Edit Item</Button>
                        </>
@@ -97,9 +95,7 @@ function ItemCard(props) {
                         
                         <Button size="sm" variant="primary" onClick={() =>addItemToCart(props.ID)}>add to Cart</Button>
                     )}
-                    </div>
-
-                </Card.Body>
+                </div>
             </Card>
         </>
     );
